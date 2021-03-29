@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+</head>
+
+<body>
+  <form id="Foo">
+    <label class="button wrap"> A <input type="checkbox" name="A"></label>
+    <div class="wrap">
+      [
+      <label class="button wrap">  and <input type="checkbox" name="And"></label>
+      <label class="button wrap">  or  <input type="checkbox" name="Or"></label>
+      <label class="button wrap">  xor <input type="checkbox" name="Xor"></label>
+      ,
+      <label class="button wrap"> nand <input type="checkbox" name="Nand"></label>
+      <label class="button wrap"> nor  <input type="checkbox" name="Nor"></label>
+      <label class="button wrap"> xnor <input type="checkbox" name="Xnor"></label>
+      ]
+    </div>
+    <label class="button wrap"> B <input type="checkbox" name="B"></label>
+
+  </form>
+  <br>
+  <input form="Foo" type="submit">
+
+  <script src="./gates.js"></script>
+  <!-- <script src="./demo.js"></script> -->
+
+</body>
+
+</html>

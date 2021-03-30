@@ -1,0 +1,57 @@
+mutation AddComment($input: AddCommentInput!) {
+  addComment(input: $input) {
+    clientMutationId
+    subject {
+      id
+    }
+  }
+}
+
+mutation AddReaction($input: AddReactionInput!) {
+  addReaction(input: $input) {
+    clientMutationId
+    reaction {
+      content
+    }
+  }
+}
+
+{
+  repositoryOwner(login: "dvdrtrgn") {
+    repository(name: "tests") {
+      issues(first: 11) {
+        edges {
+          node {
+            id
+            title
+            body
+            comments(first: 15) {
+              edges {
+                node {
+                  id
+                  body
+                  reactions(first: 9) {
+                    edges {
+                      node {
+                        id
+                        content
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+# {
+#   "input": {
+#     "clientMutationId": "123",
+#     "subjectId": "MDEyOklzc3VlQ29tbWVudDgxMTQzNjcxNg==",
+#     "content": "HOORAY"
+#   }
+# }

@@ -1,0 +1,13 @@
+CHORD CHANGES
+
+"Doowop" (begin w/classical)
+  1       2       3       4
+  I       vi      IV      V
+ 1st      6m     4th     5th
+  G       Em      C       D
+
+"Journey" (move pos4 to pos2)
+  1       2       3       4
+  I       V       vi      IV
+ 1st     5th      6m     4th
+  G       D       Em      C

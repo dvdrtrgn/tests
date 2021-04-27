@@ -1,0 +1,55 @@
+$white1: rgb(252, 252, 252);
+$white2: rgb(233, 233, 233);
+$gray1: rgb(133, 133, 133);
+$color1: rgb(101, 0, 0);
+
+$small: 2px;
+$medium: 1rem / 3;
+
+#__bs_notify__ {
+  font-size: 0.5rem !important;
+  padding: 0.2rem !important;
+}
+
+html,
+body {
+  background-color: $white1;
+  height: 100%;
+  margin: 0;
+}
+main {
+  padding: 1rem;
+}
+
+.component {
+  position: relative;
+
+  legend {
+    bottom: 0;
+    color: $gray1;
+    font-size: $medium * 2;
+    font-family: sans-serif;
+    position: absolute;
+    right: 0;
+  }
+
+  &.bar {
+    background-color: $white2;
+    border-radius: $medium;
+    display: block;
+    padding: 1rem;
+    border: 1px solid $gray1;
+  }
+
+  &.btn {
+    button.active {
+      background-color: $gray1;
+      border: 1px solid $gray1;
+      border-radius: ($small * 1.5);
+      color: white;
+      padding: $small ($small * 3.5);
+    }
+  }
+}
+
+//

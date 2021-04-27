@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvdrtrgn/tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvdrtrgn/tests/issues"
+  },
+  "homepage": "https://github.com/dvdrtrgn/tests#readme",
+  "scripts": {
+    "test": "browser-sync start --server --files **"
+  }
+}

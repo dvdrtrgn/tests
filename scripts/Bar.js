@@ -1,20 +1,20 @@
 const template = /*html*/ `
-  <span class="bar component">
-    <legend>Bar {{ message }}</legend>
-    <Btn message="A"/>
-    <Btn message="B"/>
-    <Btn message="C"/>
-  </span>`;
+<span class="bar component">
+  <legend>Bar {{ message }}</legend>
+  <Button message="A"/>
+  <Button message="B"/>
+  <Button message="C"/>
+</span>`;
 
-import Btn from './Btn.js';
+import Button from './Button.js';
 
-export default Vue.component('Bar', {
+export default {
   props: ['message'],
   template,
   data() {
     return {};
   },
   components: {
-    Btn,
+    Button,
   },
-});
+};

@@ -22,6 +22,9 @@ main {
 }
 
 .component {
+  border: 1px solid $gray1;
+  display: inline-block;
+  padding: 1rem;
   position: relative;
 
   legend {
@@ -33,22 +36,19 @@ main {
     right: 0;
   }
 
-  &.bar {
+  .bar {
     background-color: $white2;
     border-radius: $medium;
     display: block;
-    padding: 1rem;
     border: 1px solid $gray1;
   }
 
-  &.btn {
-    button.active {
-      background-color: $gray1;
-      border: 1px solid $gray1;
-      border-radius: ($small * 1.5);
-      color: white;
-      padding: $small ($small * 3.5);
-    }
+  button.active {
+    background-color: $gray1;
+    border: 1px solid $gray1;
+    border-radius: ($small * 1.5);
+    color: white;
+    padding: $small ($small * 3.5);
   }
 }
 

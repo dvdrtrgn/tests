@@ -1,13 +1,11 @@
 const template = /*html*/ `
-  <span class="btn component">
-    <button
-      @click="click"
-      :class="{ active: active }">
-        Btn {{ message }}
-    </button>
-  </span>`;
+<button
+  @click="click"
+  :class="{ active: active }">
+    Button {{ message }}
+</button>`;
 
-export default Vue.component('Btn', {
+export default {
   props: ['message'],
   data() {
     return {
@@ -23,4 +21,4 @@ export default Vue.component('Btn', {
       this.active = !this.active;
     },
   },
-});
+};

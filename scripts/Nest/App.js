@@ -1,6 +1,7 @@
+const name = 'NestApp';
 const template = /*html*/ `
-<main id="NestApp" class="component">
-  <legend>NestApp</legend>
+<main id="${name}" class="component">
+  <legend @click="Clog">${name}</legend>
   <Bar message="A"/>
   <Bar message="B"/>
 </main>`;
@@ -8,21 +9,21 @@ const template = /*html*/ `
 import 'https://unpkg.com/vue@2';
 import Bar from './Bar.js';
 
-new Vue({
-  el: '#Nest',
-  name: 'NestApp',
+const NestApp = new Vue({
+  name,
   template,
+  el: '#Nest',
   components: {
     Bar,
   },
   data() {
     return {
-      subvalue: '',
+      message: '',
     };
   },
   methods: {
     Clog() {
-      console.log('NestApp.Clog: ', this.subvalue);
+      console.log(name + '.Clog: ', this.message);
     },
   },
 });

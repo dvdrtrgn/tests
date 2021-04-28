@@ -1,30 +1,31 @@
+const name = 'TransApp';
 const template = /*html*/ `
-<main id="TransApp" class="component">
-  <legend>TransApp</legend>
+<main id="${name}" class="component">
+  <legend @click="Clog">${name}</legend>
   <BaseInput
-    message="BaseInput" placeholder="Hoist Data to TransApp"
-    @keyup.enter="Clog" v-model="subvalue"
+    message="BaseInput" placeholder="Hoist to ${name}"
+    @keyup.enter="Clog" v-model="message"
   />
 </main>`;
 
 import 'https://unpkg.com/vue@2';
 import BaseInput from './BaseInput.js';
 
-new Vue({
-  el: '#Trans',
-  name: 'TransApp',
+const TransApp = new Vue({
+  name,
   template,
+  el: '#Trans',
   components: {
     BaseInput,
   },
   data() {
     return {
-      subvalue: '',
+      message: '',
     };
   },
   methods: {
     Clog() {
-      console.log('TransApp.Clog: ', this.subvalue);
+      console.log(name + '.Clog: ', this.message);
     },
   },
 });

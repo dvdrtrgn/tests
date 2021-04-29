@@ -1,0 +1,2348 @@
+{
+  "about": "all around web dev -- cares about excellence and elegance",
+  "calendar": {
+    "1460652362": 1,
+    "1460652565": 1,
+    "1460652760": 1,
+    "1460652835": 1,
+    "1460652907": 1,
+    "1460652965": 1,
+    "1460652990": 1,
+    "1460653363": 1,
+    "1460653546": 1,
+    "1460654500": 1,
+    "1460654563": 1,
+    "1460654616": 1,
+    "1460677645": 1,
+    "1475522010": 1,
+    "1475522413": 1,
+    "1475778487": 1,
+    "1475778522": 1,
+    "1475778543": 1,
+    "1475778568": 1,
+    "1475778592": 1,
+    "1475778622": 1,
+    "1475778631": 1,
+    "1475778651": 1,
+    "1475778689": 1,
+    "1475778737": 1,
+    "1475778758": 1,
+    "1475778828": 1,
+    "1475778854": 1,
+    "1475778899": 1,
+    "1475778933": 1,
+    "1475779007": 1,
+    "1475779078": 1,
+    "1475779136": 1,
+    "1475779161": 1,
+    "1475779203": 1,
+    "1475779251": 1,
+    "1475779285": 1,
+    "1475779308": 1,
+    "1475779332": 1,
+    "1475779364": 1,
+    "1475779400": 1,
+    "1475779428": 1,
+    "1475779472": 1,
+    "1475779513": 1,
+    "1475779553": 1,
+    "1475779582": 1,
+    "1475779617": 1,
+    "1475779668": 1,
+    "1475779694": 1,
+    "1475779718": 1,
+    "1475779752": 1,
+    "1475779771": 1,
+    "1475779816": 1,
+    "1475779833": 1,
+    "1475779846": 1,
+    "1475779856": 1,
+    "1475779987": 1,
+    "1475780021": 1,
+    "1475780047": 1,
+    "1475780108": 1,
+    "1475780187": 1,
+    "1475780210": 1,
+    "1475780252": 1,
+    "1475780280": 1,
+    "1475780320": 1,
+    "1475780354": 1,
+    "1475780426": 1,
+    "1475780540": 1,
+    "1475780589": 1,
+    "1475780615": 1,
+    "1475780661": 1,
+    "1475780678": 1,
+    "1475780715": 1,
+    "1475780828": 1,
+    "1475781506": 1,
+    "1475781557": 1,
+    "1475781653": 1,
+    "1475781766": 1,
+    "1475781821": 1,
+    "1475781859": 1,
+    "1475781931": 1,
+    "1475781971": 1,
+    "1475782022": 1,
+    "1475782137": 1,
+    "1475782182": 1,
+    "1475782215": 1,
+    "1475782236": 1,
+    "1475782306": 1,
+    "1475782332": 1,
+    "1475782364": 1,
+    "1475782398": 1,
+    "1475782422": 1,
+    "1475782453": 1,
+    "1475782504": 1,
+    "1475782662": 1,
+    "1475782718": 1,
+    "1475782805": 1,
+    "1475784685": 1,
+    "1475784713": 1,
+    "1475784750": 1,
+    "1475784814": 1,
+    "1475784827": 1,
+    "1475784938": 1,
+    "1475784968": 1,
+    "1475785001": 1,
+    "1475785019": 1,
+    "1475785125": 1,
+    "1475785192": 1,
+    "1475785240": 1,
+    "1475785290": 1,
+    "1475785332": 1,
+    "1475785360": 1,
+    "1475785462": 1,
+    "1475785796": 1,
+    "1475785824": 1,
+    "1475786035": 1,
+    "1475793604": 1,
+    "1475793625": 1,
+    "1475793656": 1,
+    "1475793682": 1,
+    "1475793826": 1,
+    "1475816338": 1,
+    "1475818630": 1,
+    "1475818661": 1,
+    "1475818708": 1,
+    "1475818721": 1,
+    "1475818793": 1,
+    "1475854445": 1,
+    "1475854466": 1,
+    "1475854482": 1,
+    "1475854489": 1,
+    "1475854499": 1,
+    "1475854527": 1,
+    "1475854540": 1,
+    "1475854578": 1,
+    "1475854604": 1,
+    "1475854618": 1,
+    "1475854663": 1,
+    "1475854692": 1,
+    "1475854720": 1,
+    "1475854749": 1,
+    "1475854765": 1,
+    "1475854865": 1,
+    "1475854948": 1,
+    "1475855012": 1,
+    "1475855072": 1,
+    "1475855174": 1,
+    "1475855234": 1,
+    "1475855266": 1,
+    "1475855330": 1,
+    "1475855378": 1,
+    "1475855416": 1,
+    "1475855463": 1,
+    "1475855529": 1,
+    "1475855556": 1,
+    "1475855579": 1,
+    "1475855616": 1,
+    "1475855724": 1,
+    "1475855757": 1,
+    "1475855771": 1,
+    "1475863890": 1,
+    "1475863917": 1,
+    "1475863975": 1,
+    "1475864012": 1,
+    "1475864044": 1,
+    "1475864067": 1,
+    "1475864113": 1,
+    "1475864184": 1,
+    "1475864264": 1,
+    "1475864313": 1,
+    "1475864369": 1,
+    "1475864440": 1,
+    "1475864478": 1,
+    "1475864506": 1,
+    "1475864571": 1,
+    "1475864629": 1,
+    "1475864655": 1,
+    "1475864722": 1,
+    "1475864771": 1,
+    "1475864791": 1,
+    "1475864842": 1,
+    "1475864863": 1,
+    "1475864887": 1,
+    "1475864916": 1,
+    "1475864933": 1,
+    "1475864948": 1,
+    "1475864985": 1,
+    "1475865012": 1,
+    "1475865033": 1,
+    "1475865056": 1,
+    "1475865104": 1,
+    "1475865222": 1,
+    "1475865495": 1,
+    "1475865580": 1,
+    "1475865655": 1,
+    "1475865789": 1,
+    "1475865900": 1,
+    "1475865948": 1,
+    "1475866002": 1,
+    "1475866365": 1,
+    "1475866408": 1,
+    "1475866433": 1,
+    "1475866469": 1,
+    "1475866514": 1,
+    "1475866588": 1,
+    "1475866627": 1,
+    "1475866649": 1,
+    "1475866787": 1,
+    "1475866870": 1,
+    "1475866988": 1,
+    "1475867022": 1,
+    "1475867089": 1,
+    "1475867518": 1,
+    "1475867568": 1,
+    "1475867700": 1,
+    "1475867736": 1,
+    "1475867815": 1,
+    "1475868063": 1,
+    "1475868133": 1,
+    "1475868556": 1,
+    "1475868593": 1,
+    "1475868638": 1,
+    "1475868756": 1,
+    "1475868787": 1,
+    "1475868824": 1,
+    "1475868832": 1,
+    "1475868849": 1,
+    "1475868886": 1,
+    "1475868912": 1,
+    "1475868991": 1,
+    "1475869052": 1,
+    "1475869191": 1,
+    "1475869235": 1,
+    "1475869303": 1,
+    "1475869406": 1,
+    "1475869442": 1,
+    "1475869460": 1,
+    "1475869501": 1,
+    "1475869553": 1,
+    "1475869571": 1,
+    "1475869666": 1,
+    "1475869690": 1,
+    "1475869961": 1,
+    "1475870485": 1,
+    "1475871244": 1,
+    "1475871392": 1,
+    "1475959492": 1,
+    "1475959685": 1,
+    "1475959792": 1,
+    "1475960264": 1,
+    "1475960593": 1,
+    "1475960659": 1,
+    "1475960913": 1,
+    "1475960948": 1,
+    "1475961609": 1,
+    "1475961801": 1,
+    "1475962387": 1,
+    "1475962484": 1,
+    "1475962510": 1,
+    "1475962582": 1,
+    "1475963004": 1,
+    "1475963046": 1,
+    "1475963077": 1,
+    "1475963159": 1,
+    "1475965498": 1,
+    "1475969239": 1,
+    "1475983061": 1,
+    "1475984214": 1,
+    "1475984729": 1,
+    "1475985221": 1,
+    "1475985398": 1,
+    "1475987414": 1,
+    "1475987455": 1,
+    "1475987912": 1,
+    "1475988189": 1,
+    "1475988409": 1,
+    "1475989291": 1,
+    "1475989867": 1,
+    "1476076278": 1,
+    "1476076432": 1,
+    "1476076641": 1,
+    "1476077713": 1,
+    "1476077864": 1,
+    "1476078025": 1,
+    "1476078785": 1,
+    "1476163328": 1,
+    "1476247186": 1,
+    "1476247966": 1,
+    "1476247986": 1,
+    "1476333091": 1,
+    "1476333110": 1,
+    "1476333150": 1,
+    "1476333189": 1,
+    "1476333221": 1,
+    "1476333323": 1,
+    "1476333365": 1,
+    "1476333381": 1,
+    "1476333395": 1,
+    "1476333643": 1,
+    "1476333921": 1,
+    "1476416107": 1,
+    "1476416139": 1,
+    "1476416164": 1,
+    "1476416208": 1,
+    "1476416230": 1,
+    "1476416290": 1,
+    "1476416316": 1,
+    "1476416376": 1,
+    "1476416423": 1,
+    "1476416438": 1,
+    "1476416450": 1,
+    "1476419641": 1,
+    "1476576131": 1,
+    "1476576491": 1,
+    "1476576561": 1,
+    "1476576605": 1,
+    "1476576629": 1,
+    "1476576722": 1,
+    "1476576759": 1,
+    "1476576794": 1,
+    "1476576846": 1,
+    "1476576899": 1,
+    "1476678665": 1,
+    "1476678706": 1,
+    "1476678742": 1,
+    "1476678828": 1,
+    "1476678852": 1,
+    "1476678886": 1,
+    "1476678985": 1,
+    "1476679057": 1,
+    "1476761985": 1,
+    "1476762008": 1,
+    "1476762033": 1,
+    "1476762061": 1,
+    "1476762130": 1,
+    "1476845423": 1,
+    "1476846085": 1,
+    "1476939341": 1,
+    "1477029903": 1,
+    "1477110626": 1,
+    "1477198201": 1,
+    "1477285020": 1,
+    "1477422367": 1,
+    "1477536648": 1
+  },
+  "completedChallenges": [
+    {
+      "id": "af7588ade1100bde429baf20",
+      "completedDate": 1475987414321,
+      "files": []
+    },
+    {
+      "id": "afd15382cdfb22c9efe8b7de",
+      "completedDate": 1475985398286,
+      "files": []
+    },
+    {
+      "id": "a0b5010f579e69b815e7c5d6",
+      "completedDate": 1475984729456,
+      "files": []
+    },
+    {
+      "id": "aa7697ea2477d1316795783b",
+      "completedDate": 1475985221413,
+      "files": []
+    },
+    {
+      "id": "a103376db3ba46b2d50db289",
+      "completedDate": 1475988409164,
+      "files": []
+    },
+    {
+      "id": "a8e512fbe388ac2f9198f0fa",
+      "completedDate": 1475984214307,
+      "files": []
+    },
+    {
+      "id": "a39963a4c10bc8b4d4f06d7e",
+      "completedDate": 1475961609285,
+      "files": []
+    },
+    {
+      "id": "a5de63ebea8dbee56860f4f2",
+      "completedDate": 1475983061324,
+      "files": []
+    },
+    {
+      "id": "a3566b1109230028080c9345",
+      "completedDate": 1475969239250,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244c2",
+      "completedDate": 1475864506153,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7153d8c441eddfaeb5bdfd",
+      "completedDate": 1477536648985,
+      "challengeType": 2,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244c3",
+      "completedDate": 1475864571050,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08756",
+      "completedDate": 1460652835643,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd8aedf06756",
+      "completedDate": 1460652965110,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf06756",
+      "completedDate": 1460652990429,
+      "files": []
+    },
+    {
+      "id": "560add10cb82ac38a17513be",
+      "completedDate": 1460653363133,
+      "challengeType": 7,
+      "files": []
+    },
+    {
+      "id": "560add37cb82ac38a17513bf",
+      "completedDate": 1460653546491,
+      "challengeType": 7,
+      "files": []
+    },
+    {
+      "id": "560add56cb82ac38a17513c0",
+      "completedDate": 1460654500422,
+      "challengeType": 7,
+      "files": []
+    },
+    {
+      "id": "560add71cb82ac38a17513c2",
+      "completedDate": 1460654563089,
+      "challengeType": 7,
+      "files": []
+    },
+    {
+      "id": "560add8ccb82ac38a17513c4",
+      "completedDate": 1460654616871,
+      "challengeType": 7,
+      "files": []
+    },
+    {
+      "id": "a7f4d8f2483413a6ce226cac",
+      "completedDate": 1475522010959,
+      "solution": "//esversion: 6\n\nvar convertToRoman = (function () {\n  'use strict';\n\n  var W = (W && W.window || window);\n  var C = (W.C || W.console || {});\n\n  // - - - - - - - - - - - - - - - - - -\n  // ASSIGN\n\n  var Nom = 'Roman',\n    Api = {\n      slick: null,\n    };\n\n  // - - - - - - - - - - - - - - - - - -\n  // RUNTIME\n\n  function makeRomDigit() {\n    var x = { // 'roman digits'\n      _idx: 6,\n      _order: 'IVXLCDM',\n      _hash: {\n        I: 1,\n        V: 5,\n        X: 10,\n        L: 50,\n        C: 100,\n        D: 500,\n        M: 1000,\n      },\n      toString: () => x._order.charAt(x._idx),\n      valueOf: () => x._hash[x.toString()] || 0,\n      shift: () => x._idx > -1 ? x._idx-- && x.valueOf() : 0,\n      reset: () => x._idx = 6,\n      ensure: (v) => (isNaN(v) || v > 4999 || v < 1) ? 0 : parseInt(v, 10),\n      approx: function (v) {\n        if (!x.ensure(v)) {\n          throw Error('unroman!');\n        }\n        while (x.valueOf() > v) x.shift();\n      },\n    };\n    return x;\n  }\n\n  // - - - - - - - - - - - - - - - - - -\n  // INIT\n  /*\n   */\n\n  function calcRoman(v, old) {\n    var b = '';\n    var rd = makeRomDigit();\n\n    do {\n      rd.approx(v);\n      v -= Number(rd);\n      b += String(rd);\n    } while (v);\n\n    if (!old) {\n      b = b\n        .replace(/DCCCC/, 'CM')\n        .replace(/CCCC/, 'CD')\n        .replace(/LXXXX/, 'XC')\n        .replace(/XXXX/, 'XL')\n        .replace(/VIIII/, 'IX')\n        .replace(/IIII/, 'IV');\n    }\n\n    return b;\n  }\n\n  Api = {\n    convert: calcRoman,\n  };\n\n  if (W._dbug > 0) { // Expose\n    W[Nom] = Api;\n    C.warn(Nom, 'exposed', Api);\n  } else {\n    //C.debug(Nom, 'loaded', Api);\n  }\n\n  return calcRoman;\n}());\nconvertToRoman(36);\n",
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "560adf65cb82ac38a17513c2",
+      "completedDate": 1475522413394,
+      "challengeType": 7,
+      "files": []
+    },
+    {
+      "id": "bd7123c8c441eddfaeb5bdef",
+      "completedDate": 1475778487885,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf0887a",
+      "completedDate": 1475778522398,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08801",
+      "completedDate": 1475778543292,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08802",
+      "completedDate": 1475778568007,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08804",
+      "completedDate": 1475778592576,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08833",
+      "completedDate": 1475778622706,
+      "files": []
+    },
+    {
+      "id": "bad87fed1348bd9aedf08833",
+      "completedDate": 1475778631577,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08803",
+      "completedDate": 1475778651086,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08805",
+      "completedDate": 1475778689223,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aecf08806",
+      "completedDate": 1475778737940,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aefe08806",
+      "completedDate": 1475778758649,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08806",
+      "completedDate": 1475778828536,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aede08807",
+      "completedDate": 1475778854711,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08807",
+      "completedDate": 1475778899483,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08808",
+      "completedDate": 1475778933372,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08812",
+      "completedDate": 1475779007227,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9acdf08812",
+      "completedDate": 1475779078157,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9bedf08813",
+      "completedDate": 1475779136837,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08814",
+      "completedDate": 1475779161279,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08815",
+      "completedDate": 1475779203195,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08816",
+      "completedDate": 1475779251001,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aede08817",
+      "completedDate": 1475779285767,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08817",
+      "completedDate": 1475779308208,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08820",
+      "completedDate": 1475779332342,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08827",
+      "completedDate": 1475779364212,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08828",
+      "completedDate": 1475779400758,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08829",
+      "completedDate": 1475779428922,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08830",
+      "completedDate": 1475779472863,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aede08830",
+      "completedDate": 1475779513587,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedd08830",
+      "completedDate": 1475779553826,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedc08830",
+      "completedDate": 1475779582483,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08834",
+      "completedDate": 1475779617213,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08835",
+      "completedDate": 1475779668279,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedd08835",
+      "completedDate": 1475779694825,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aede08835",
+      "completedDate": 1475779718441,
+      "files": []
+    },
+    {
+      "id": "bad87fed1348bd9aede07836",
+      "completedDate": 1475779752779,
+      "files": []
+    },
+    {
+      "id": "bad87eee1348bd9aede07836",
+      "completedDate": 1475779771806,
+      "files": []
+    },
+    {
+      "id": "bad87dee1348bd9aede07836",
+      "completedDate": 1475779816365,
+      "files": []
+    },
+    {
+      "id": "bad88fee1348bd9aedf08825",
+      "completedDate": 1475779833064,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08822",
+      "completedDate": 1475779846098,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08823",
+      "completedDate": 1475779856371,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08824",
+      "completedDate": 1475779987396,
+      "files": []
+    },
+    {
+      "id": "bad87fee1248bd9aedf08824",
+      "completedDate": 1475780021719,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08826",
+      "completedDate": 1475780047183,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9afdf08726",
+      "completedDate": 1475780108409,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf07756",
+      "completedDate": 1475780187612,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08726",
+      "completedDate": 1475780210496,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08721",
+      "completedDate": 1475780252032,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08719",
+      "completedDate": 1475780280653,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aede08718",
+      "completedDate": 1475780320338,
+      "files": []
+    },
+    {
+      "id": "bad82fee1348bd9aedf08721",
+      "completedDate": 1475780354029,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9acde08712",
+      "completedDate": 1475780426180,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9acde08812",
+      "completedDate": 1475780540445,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd8acde08812",
+      "completedDate": 1475780589582,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348cd8acdf08812",
+      "completedDate": 1475780615812,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348cd8acef08812",
+      "completedDate": 1475780661671,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348cd8acef08811",
+      "completedDate": 1475780678923,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348cd8acef08813",
+      "completedDate": 1475780715596,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348ce8acef08814",
+      "completedDate": 1475780828242,
+      "files": []
+    },
+    {
+      "id": "bad88fee1348ce8acef08815",
+      "completedDate": 1475781506999,
+      "files": []
+    },
+    {
+      "id": "bad87fee1347bd9aedf08845",
+      "completedDate": 1475781557903,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08845",
+      "completedDate": 1475781653427,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aede08845",
+      "completedDate": 1475781766847,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedd08845",
+      "completedDate": 1475781821326,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedc08845",
+      "completedDate": 1475781859876,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedb08845",
+      "completedDate": 1475781931449,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aeda08845",
+      "completedDate": 1475781971919,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aed908845",
+      "completedDate": 1475782022539,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908845",
+      "completedDate": 1475782137048,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908846",
+      "completedDate": 1475782182576,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908746",
+      "completedDate": 1475782215192,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9bec908846",
+      "completedDate": 1475782236564,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908847",
+      "completedDate": 1475782306827,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908848",
+      "completedDate": 1475782332624,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908849",
+      "completedDate": 1475782364670,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908850",
+      "completedDate": 1475782398496,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908852",
+      "completedDate": 1475782422785,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908853",
+      "completedDate": 1475782453970,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908854",
+      "completedDate": 1475782504317,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908855",
+      "completedDate": 1475782662430,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908856",
+      "completedDate": 1475782718617,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aec908857",
+      "completedDate": 1475782805100,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9acdd08826",
+      "completedDate": 1475784685141,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9bedc08826",
+      "completedDate": 1475784713424,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedc08826",
+      "completedDate": 1475784750869,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aeda08826",
+      "completedDate": 1475784814813,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aeda08726",
+      "completedDate": 1475784827696,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aed908626",
+      "completedDate": 1475784938319,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aed918626",
+      "completedDate": 1475784968014,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aed908826",
+      "completedDate": 1475785001295,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aed808826",
+      "completedDate": 1475785019903,
+      "files": []
+    },
+    {
+      "id": "564944c91be2204b269d51e3",
+      "completedDate": 1475785125705,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aed708826",
+      "completedDate": 1475785192950,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aed608826",
+      "completedDate": 1475785240030,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aed508826",
+      "completedDate": 1475785290591,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aed308826",
+      "completedDate": 1475785332076,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aed208826",
+      "completedDate": 1475785360802,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aed108826",
+      "completedDate": 1475785462935,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aed008826",
+      "completedDate": 1475785796706,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aecb08826",
+      "completedDate": 1475785824775,
+      "files": []
+    },
+    {
+      "id": "bd7158d8c442eddfbeb5bd1f",
+      "completedDate": 1475786035892,
+      "challengeType": 7,
+      "files": []
+    },
+    {
+      "id": "573c96eac9a6be092d7830c1",
+      "completedDate": 1475793604942,
+      "challengeType": 7,
+      "files": []
+    },
+    {
+      "id": "560ade65cb82ac38a17513c2",
+      "completedDate": 1475793625914,
+      "challengeType": 7,
+      "files": []
+    },
+    {
+      "id": "570add8ccb82ac38a17513c3",
+      "completedDate": 1475793656915,
+      "challengeType": 7,
+      "files": []
+    },
+    {
+      "id": "560add8ccb81ac38a17513c4",
+      "completedDate": 1475793682176,
+      "challengeType": 7,
+      "files": []
+    },
+    {
+      "id": "bd7123c9c441eddfaeb4bdef",
+      "completedDate": 1475793826181,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7158d8c442eddfaeb5bd18",
+      "completedDate": 1475816338236,
+      "solution": "http://codepen.io/dvdrtrgn/pen/ALVKZR",
+      "challengeType": 3,
+      "files": []
+    },
+    {
+      "id": "bd7158d8c242eddfaeb5bd13",
+      "completedDate": 1475818630698,
+      "solution": "http://codepen.io/dvdrtrgn/pen/vXdmmd",
+      "challengeType": 3,
+      "files": []
+    },
+    {
+      "id": "bd7123c9c443eddfaeb5bdef",
+      "completedDate": 1475818661846,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244a8",
+      "completedDate": 1475818708319,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244a9",
+      "completedDate": 1475818721307,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244aa",
+      "completedDate": 1475818793734,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244ab",
+      "completedDate": 1475854445588,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c11feddfaeb3bdef",
+      "completedDate": 1475854466931,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c11feddfaeb4bdef",
+      "completedDate": 1475854482727,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1231c1c11feddfaeb5bdef",
+      "completedDate": 1475854489494,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c11feddfaeb6bdef",
+      "completedDate": 1475854499239,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244ac",
+      "completedDate": 1475854527305,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244ad",
+      "completedDate": 1475854540192,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1391c1c11feddfaeb4bdef",
+      "completedDate": 1475854578964,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7993c9c69feddfaeb7bdef",
+      "completedDate": 1475854604325,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7993c9ca9feddfaeb7bdef",
+      "completedDate": 1475854618599,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244ae",
+      "completedDate": 1475854663407,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244af",
+      "completedDate": 1475854692122,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244b0",
+      "completedDate": 1475854720567,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244b1",
+      "completedDate": 1475854749644,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244b2",
+      "completedDate": 1475854765818,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244b3",
+      "completedDate": 1475854865363,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7123c9c444eddfaeb5bdef",
+      "completedDate": 1475854948249,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244b5",
+      "completedDate": 1475855012332,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244b4",
+      "completedDate": 1475855072729,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244b6",
+      "completedDate": 1475855174634,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244b7",
+      "completedDate": 1475855234696,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244b8",
+      "completedDate": 1475855266813,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244b9",
+      "completedDate": 1475855330310,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244ed",
+      "completedDate": 1475855378033,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7123c9c448eddfaeb5bdef",
+      "completedDate": 1475855416883,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7123c9c549eddfaeb5bdef",
+      "completedDate": 1475855463766,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244ba",
+      "completedDate": 1475855529590,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7123c9c450eddfaeb5bdef",
+      "completedDate": 1475855556450,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7123c9c451eddfaeb5bdef",
+      "completedDate": 1475855579584,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7123c9c452eddfaeb5bdef",
+      "completedDate": 1475855616813,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244bb",
+      "completedDate": 1475855724845,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7993c9c69feddfaeb8bdef",
+      "completedDate": 1475855757172,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c11feddfaeb7bdef",
+      "completedDate": 1475855771786,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392ca",
+      "completedDate": 1475863890553,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c11feddfaeb8bdef",
+      "completedDate": 1475863917802,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56592a60ddddeae28f7aa8e1",
+      "completedDate": 1475863975445,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392cb",
+      "completedDate": 1475864012438,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392cc",
+      "completedDate": 1475864044446,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392cd",
+      "completedDate": 1475864067977,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392ce",
+      "completedDate": 1475864113530,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244bc",
+      "completedDate": 1475864184788,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392cf",
+      "completedDate": 1475864264628,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244bd",
+      "completedDate": 1475864313303,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244be",
+      "completedDate": 1475864369865,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244bf",
+      "completedDate": 1475864440252,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244c0",
+      "completedDate": 1475864478504,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7153d8c441eddfaeb5bdfe",
+      "completedDate": 1477422367662,
+      "challengeType": 2,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf04756",
+      "completedDate": 1460652907018,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244c6",
+      "completedDate": 1475864629514,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7123c9c441eddfaeb5bdef",
+      "completedDate": 1475864655549,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c12feddfaeb3bdef",
+      "completedDate": 1475864722139,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244d0",
+      "completedDate": 1475864771079,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244d1",
+      "completedDate": 1475864791551,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244d2",
+      "completedDate": 1475864842473,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244d3",
+      "completedDate": 1475864863927,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244d4",
+      "completedDate": 1475864887084,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244d5",
+      "completedDate": 1475864916382,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244d6",
+      "completedDate": 1475864933160,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244d7",
+      "completedDate": 1475864948275,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244d8",
+      "completedDate": 1475864985349,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244d9",
+      "completedDate": 1475865012380,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244da",
+      "completedDate": 1475865033918,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244db",
+      "completedDate": 1475865056080,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "5690307fddb111c6084545d7",
+      "completedDate": 1475865104581,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244dc",
+      "completedDate": 1475865222061,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "5664820f61c48e80c9fa476c",
+      "completedDate": 1475865495061,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244dd",
+      "completedDate": 1475865580052,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244de",
+      "completedDate": 1475865655980,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244df",
+      "completedDate": 1475865789614,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244e0",
+      "completedDate": 1475865900658,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "5679ceb97cbaa8c51670a16b",
+      "completedDate": 1475865948671,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244c4",
+      "completedDate": 1475866002318,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "565bbe00e9cc8ac0725390f4",
+      "completedDate": 1475866365078,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392d0",
+      "completedDate": 1475866408274,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244c7",
+      "completedDate": 1475866433231,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244c8",
+      "completedDate": 1475866469616,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244c9",
+      "completedDate": 1475866514358,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392d1",
+      "completedDate": 1475866588366,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392d2",
+      "completedDate": 1475866627663,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392d3",
+      "completedDate": 1475866649437,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244ca",
+      "completedDate": 1475866787628,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "567af2437cbaa8c51670a16c",
+      "completedDate": 1475866870325,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244cb",
+      "completedDate": 1475866988987,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244cc",
+      "completedDate": 1475867022917,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244cd",
+      "completedDate": 1475867089557,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244cf",
+      "completedDate": 1475867518198,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c11feddfaeb5bdef",
+      "completedDate": 1475867568430,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56104e9e514f539506016a5c",
+      "completedDate": 1475867700433,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56105e7b514f539506016a5e",
+      "completedDate": 1475867736195,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "5675e877dbd60be8ad28edc6",
+      "completedDate": 1475867815266,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244e1",
+      "completedDate": 1475868063857,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c11feddfaeb1bdef",
+      "completedDate": 1475868133806,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "5688e62ea601b2482ff8422b",
+      "completedDate": 1475868556831,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c11feddfaeb9bdef",
+      "completedDate": 1475868593129,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c12feddfaeb1bdef",
+      "completedDate": 1475868638094,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c12feddfaeb2bdef",
+      "completedDate": 1475868756743,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c12feddfaeb6bdef",
+      "completedDate": 1475868787583,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c12feddfaeb7bdef",
+      "completedDate": 1475868824361,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c12feddfaeb8bdef",
+      "completedDate": 1475868832131,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c13feddfaeb3bdef",
+      "completedDate": 1475868849088,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c15feddfaeb1bdef",
+      "completedDate": 1475868886552,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c15feddfaeb2bdef",
+      "completedDate": 1475868912772,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c15feddfaeb4bdef",
+      "completedDate": 1475868991458,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "563cfb55594311ffcb333c70",
+      "completedDate": 1475869052218,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c15feddfaeb3bdef",
+      "completedDate": 1475869191030,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c15feddfaeb7bdef",
+      "completedDate": 1475869235699,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c15feddfaeb8bdef",
+      "completedDate": 1475869303695,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c15feddfaeb9bdef",
+      "completedDate": 1475869406380,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c16feddfaeb1bdef",
+      "completedDate": 1475869442149,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c16feddfaeb2bdef",
+      "completedDate": 1475869460541,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c16feddfaeb3bdef",
+      "completedDate": 1475869501500,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c16feddfaeb4bdef",
+      "completedDate": 1475869553828,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c16feddfaeb5bdef",
+      "completedDate": 1475869571796,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "bd7158d2c442eddfbeb5bd1f",
+      "completedDate": 1475869666581,
+      "challengeType": 7,
+      "files": []
+    },
+    {
+      "id": "a202eed8fc186c8434cb6d61",
+      "completedDate": 1475869690789,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a302f7aae1aa3152a5b413bc",
+      "completedDate": 1475869961299,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "aaa48de84e1ecc7c742e1124",
+      "completedDate": 1475870485929,
+      "solution": "\nfunction palindrome(str) {\n  // Good luck!\n  var arr = str.toLowerCase().match(/[a-z\\d]/g);\n  while (arr.length > 1) {\n    if (arr.shift() != arr.pop()) {\n      return false;\n    }\n  }\n  return true;\n}\n\n\n\npalindrome(\"eye\");\n",
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a26cbbe9ad8655a977e1ceb5",
+      "completedDate": 1475871244945,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "ab6137d4e35944e21037b769",
+      "completedDate": 1475871392128,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a789b3483989747d63b0e427",
+      "completedDate": 1475959492061,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "acda2fb1324d9b0fa741e6b5",
+      "completedDate": 1475959685216,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "afcc8d540bea9ea2669306b6",
+      "completedDate": 1475959792959,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "ac6993d51946422351508a41",
+      "completedDate": 1475960264994,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a9bd25c716030ec90084d8a1",
+      "completedDate": 1475960593434,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "ab31c21b530c0dafa9e241ee",
+      "completedDate": 1475960659227,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "af2170cad53daa0770fabdea",
+      "completedDate": 1475960913156,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "adf08ec01beb4f99fc7a68f2",
+      "completedDate": 1475960948175,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a24c1a4622e3c05097f71d67",
+      "completedDate": 1475961801090,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "56533eb9ac21ba0edf2244e2",
+      "completedDate": 1475962387757,
+      "solution": "\nfunction rot13(str) { // LBH QVQ VG!\n  // A = 65  / B = 90\n  var arr = str.split('');\n  arr = arr.map(function (e) {\n    var idx = e.charCodeAt(0);\n    if (idx < 65 || idx > 90) {\n      return e;\n    }\n    idx = (idx - 52) % 26;\n    return String.fromCharCode(idx + 65);\n  });\n  return arr.join('');\n}\n\n// Change the inputs below to test\nrot13(\"LBH QVQ VG\");\n",
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392d4",
+      "completedDate": 1475962484666,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392d5",
+      "completedDate": 1475962510521,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392d6",
+      "completedDate": 1475962582585,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392d7",
+      "completedDate": 1475963004390,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392d8",
+      "completedDate": 1475963046490,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392d9",
+      "completedDate": 1475963077630,
+      "files": []
+    },
+    {
+      "id": "56bbb991ad1ed5201cd392da",
+      "completedDate": 1475963159584,
+      "files": []
+    },
+    {
+      "id": "bd7158d8c442eddfaeb5bd13",
+      "completedDate": 1475965498416,
+      "solution": "http://codepen.io/dvdrtrgn/pen/WGzALz",
+      "challengeType": 3,
+      "files": []
+    },
+    {
+      "id": "a77dbc43c33f39daa4429b4f",
+      "completedDate": 1475987455603,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a105e963526e7de52b219be9",
+      "completedDate": 1475987912865,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a6b0bb188d873cb2c8729495",
+      "completedDate": 1475988189514,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a5229172f011153519423690",
+      "completedDate": 1475989291141,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a3bfc1673c0526e06d3ac698",
+      "completedDate": 1475989867578,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "ae9defd7acaf69703ab432ea",
+      "completedDate": 1476076278322,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a6e40f1041b06c996f7b2406",
+      "completedDate": 1476076432361,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a5deed1811a43193f9f1c841",
+      "completedDate": 1476076641603,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "ab306dbdcc907c7ddfc30830",
+      "completedDate": 1476077713779,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a8d97bd4c764e91f9d2bda01",
+      "completedDate": 1476077864756,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a10d2431ad0c6a099a4b8b52",
+      "completedDate": 1476078025999,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a97fd23d9b809dac9921074f",
+      "completedDate": 1476078785108,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "aff0395860f5d3034dc0bfc9",
+      "completedDate": 1476163328920,
+      "solution": "\nfunction telephoneCheck(str) {\n  // Good luck!\n  var formed = str.match(/^1?\\D{0,2}(\\d{3})\\D{0,2}(\\d{3})\\D?(\\d{4})$/);\n  var okarea = str.match(/\\(\\d{3}\\)|^[^()]*$/);\n  return Boolean(okarea && formed);\n}\n\ntelephoneCheck(\"555-555-5555\");\n",
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a3f503de51cf954ede28891d",
+      "completedDate": 1476247186961,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c16feddfaeb6bdef",
+      "completedDate": 1476247966665,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "cf1111c1c16feddfaeb7bdef",
+      "completedDate": 1476247986851,
+      "challengeType": 1,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f315184",
+      "completedDate": 1476333091610,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f315183",
+      "completedDate": 1476333110281,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f315182",
+      "completedDate": 1476333150453,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f315181",
+      "completedDate": 1476333189737,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f315180",
+      "completedDate": 1476333221195,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31517f",
+      "completedDate": 1476333323512,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31517e",
+      "completedDate": 1476333365354,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31517d",
+      "completedDate": 1476333381067,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31517c",
+      "completedDate": 1476333395798,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31517b",
+      "completedDate": 1476333643313,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31517a",
+      "completedDate": 1476333921226,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31518f",
+      "completedDate": 1476416107589,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31518e",
+      "completedDate": 1476416139058,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31518c",
+      "completedDate": 1476416164191,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31518d",
+      "completedDate": 1476416208915,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31518b",
+      "completedDate": 1476416230275,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31518a",
+      "completedDate": 1476416290865,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f315189",
+      "completedDate": 1476416316032,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f315188",
+      "completedDate": 1476416376326,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f315187",
+      "completedDate": 1476416423200,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f315186",
+      "completedDate": 1476416438575,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f315185",
+      "completedDate": 1476416450147,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "a3f503de51cfab748ff001aa",
+      "completedDate": 1476419641825,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "bd7353d8c341eddeaeb5bd0f",
+      "completedDate": 1476576131981,
+      "challengeType": 2,
+      "files": []
+    },
+    {
+      "id": "bd7128d8c441eddfbeb5bddf",
+      "completedDate": 1476576491898,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7127d8c441eddfbeb5bddf",
+      "completedDate": 1476576561605,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7129d8a441eddfbeb5bddf",
+      "completedDate": 1476576605028,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7126d8c441eddfbeb5bddf",
+      "completedDate": 1476576629520,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7125d8c441eddfbeb5bddf",
+      "completedDate": 1476576722734,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7122d8c441eddfbeb5bddf",
+      "completedDate": 1476576759577,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7124d8c441eddfbeb5bddf",
+      "completedDate": 1476576794195,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7123d8c441eddfbeb5bddf",
+      "completedDate": 1476576846916,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7121d8c441eddfbeb5bddf",
+      "completedDate": 1476576899729,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7120d8c441eddfbeb5bddf",
+      "completedDate": 1476678665204,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd712fd8c441eddfbeb5bddf",
+      "completedDate": 1476678706711,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd712ed8c441eddfbeb5bddf",
+      "completedDate": 1476678742899,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd712dd8c441eddfbeb5bddf",
+      "completedDate": 1476678828657,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd712cd8c441eddfbeb5bddf",
+      "completedDate": 1476678852905,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "56b15f15632298c12f31510f",
+      "completedDate": 1476678886719,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7129d80441eddfbeb5bddf",
+      "completedDate": 1476678985644,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7129d8b441eddfbeb5bddf",
+      "completedDate": 1476679057197,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7029d8c441eddfbeb5bddf",
+      "completedDate": 1476761985637,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd712ad8c441eddfbeb5bddf",
+      "completedDate": 1476762008208,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7119d8c441eddfbeb5bddf",
+      "completedDate": 1476762033531,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd712bd8c441eddfbeb5bddf",
+      "completedDate": 1476762061765,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "bd7129d89441eddfbeb5bddf",
+      "completedDate": 1476762130133,
+      "challengeType": 6,
+      "files": []
+    },
+    {
+      "id": "a2f1d72d9b908d0bd72bb9f6",
+      "completedDate": 1476845423028,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "af4afb223120f7348cdfc9fd",
+      "completedDate": 1476846085783,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a56138aff60341a09ed6c480",
+      "completedDate": 1476939341990,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "aa2e6f85cab2ab736c9a9b24",
+      "completedDate": 1477029903836,
+      "solution": "var lookup = (function (H) {\n  H = JSON.parse(\n    '{\"PENNY\":1,\"NICKEL\":5,\"DIME\":10,\"QUARTER\":25,\"ONE\":100,\"FIVE\":500,\"TEN\":1e3,\"TWENTY\":2e3,\"ONE HUNDRED\":1e4}'\n  );\n  for (var i in H) H[H[i]] = i; // reverse lookup\n  return function (x) {\n    if (!H[x]) throw Error('bad lookup');\n    return H[x];\n  };\n}());\n\nfunction round(num) {\n  return Math.round(num * 100) / 100;\n}\n\nfunction Tray(value, denom, label) {\n  value *= 100;\n\n  function kosher(val) {\n    val = val ? round(val) : 0;\n    if ((value + val) < 0) throw Error(label + ' empty tray: ' + val / 100);\n    if (val % denom) throw Error(label + ' bad denomination: ' + val / 100);\n    return Boolean(val);\n  }\n  function coerce(val) {\n    if (!val) throw Error('no val to coerce');\n    return Math.floor(val / denom) * denom;\n  }\n  this.value = function (val) {\n    val = round (val * 100);\n    if (kosher(val)) value += val;\n    value = round(value);\n    this._count = this.count();\n    this._denom = denom;\n    this._value = '$' + (value / 100).toFixed(2);\n    return value / 100;\n  };\n  this.count = function (cnt) {\n    var val = (cnt || 0) * denom;\n    if (kosher(val)) value += val;\n    return round(value / denom);\n  };\n  this.take = function (val) {\n    val = round (val * 100);\n    if (val < 0) throw Error('wanna give?');\n    var real = Math.min(value, val);\n    if (real > 0) {\n      real = coerce(real) / 100;\n      this.value(-real);\n    }\n    return real;\n  };\n  this.tallyFor = function () {\n    return [label, value];\n  };\n  this.label = label;\n}\n\nfunction fillDrawer(arr) {\n  var ord = [];\n  arr.reverse().forEach(function (pair) {\n    var str = pair[0];\n    var val = pair[1];\n    var den = lookup(str);\n    ord.push(new Tray(val, den, str));\n  });\n  ord.get = function (due) {\n    var i = 0, tray, got, rez = [];\n\n    while (due && (tray = ord[i++])) {\n      got = tray.take(due);\n      due -= got;\n      due = round(due);\n      if (got) rez.push([tray.label, got]);\n    }\n    if (due) return 'Insufficient Funds';\n    if (tray.value() === 0) return 'Closed';\n    return rez;\n  };\n  return ord;\n}\n\nfunction checkCashRegister(price, cash, cid) {\n  var change = fillDrawer(cid);\n  change = change.get(cash - price);\n  console.log(change);\n  return change;\n}\n",
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "a19f0fbe1872186acd434d5a",
+      "completedDate": 1477110626291,
+      "challengeType": 5,
+      "files": []
+    },
+    {
+      "id": "bd7153d8c441eddfaeb5bd0f",
+      "completedDate": 1477198201106,
+      "challengeType": 2,
+      "files": []
+    },
+    {
+      "id": "bd7153d8c441eddfaeb5bdff",
+      "completedDate": 1477285020460,
+      "challengeType": 2,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08746",
+      "completedDate": 1460652760696,
+      "files": []
+    },
+    {
+      "id": "bad87fee1348bd9aedf08736",
+      "completedDate": 1460652565124,
+      "files": []
+    }
+  ],
+  "isApisMicroservicesCert": false,
+  "isBackEndCert": false,
+  "isCheater": false,
+  "isDonating": false,
+  "is2018DataVisCert": false,
+  "isDataVisCert": false,
+  "isFrontEndCert": false,
+  "isFullStackCert": false,
+  "isFrontEndLibsCert": false,
+  "isHonest": false,
+  "isInfosecQaCert": false,
+  "isQaCertV7": false,
+  "isInfosecCertV7": false,
+  "isJsAlgoDataStructCert": false,
+  "isRespWebDesignCert": false,
+  "isSciCompPyCertV7": false,
+  "isDataAnalysisPyCertV7": false,
+  "isMachineLearningPyCertV7": false,
+  "location": "55409",
+  "name": "dvdrtrgn",
+  "points": 344,
+  "portfolio": [],
+  "profileUI": {
+    "isLocked": false,
+    "showAbout": true,
+    "showCerts": true,
+    "showHeatMap": true,
+    "showLocation": true,
+    "showName": true,
+    "showPoints": true,
+    "showPortfolio": true,
+    "showTimeLine": true
+  },
+  "streak": {
+    "longest": 8,
+    "current": 0
+  },
+  "twitter": "https://www.twitter.com/dvdrtrgn",
+  "username": "dvdrtrgn",
+  "yearsTopContributor": [],
+  "currentChallengeId": "a105e963526e7de52b219be9",
+  "email": "dvdrtrgn@gmail.com",
+  "emailVerified": true,
+  "id": "570fc94cca96c6bb559373ea",
+  "sendQuincyEmail": false,
+  "theme": "default",
+  "completedChallengeCount": 342,
+  "completedProjectCount": 3,
+  "completedCertCount": 0,
+  "completedLegacyCertCount": 0,
+  "acceptedPrivacyTerms": true,
+  "isEmailVerified": true,
+  "isGithub": false,
+  "isLinkedIn": false,
+  "isTwitter": true,
+  "isWebsite": false,
+  "picture": "https://avatars.githubusercontent.com/u/75495?v=3",
+  "joinDate": "2016-04-14T16:46:04.000Z",
+  "sessionUser": true
+}

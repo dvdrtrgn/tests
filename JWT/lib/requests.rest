@@ -1,0 +1,26 @@
+### protected posts
+GET http://localhost:4001/posts
+Authorization: Bearer godmode!
+
+### just my posts
+GET http://localhost:4001/myposts
+Authorization: Bearer foobar
+
+
+### get user tokens
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{ "username": "Kyle" }
+
+### get access token
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{ "loginToken": "backdoor!" }
+
+### remove login token
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{ "loginToken": "backdoor!" }

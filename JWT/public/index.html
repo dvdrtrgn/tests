@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./base.css">
+  <title>Fetching</title>
+</head>
+
+<body>
+  <main id="Fetching" class="component">
+    <div>
+      <label>
+        <b>Username</b>
+        <input v-model="in_username" placeholder="username">
+      </label>
+      <button @click="fetchLogin">Do Login</button>
+    </div>
+
+    <div>
+      <br>
+      <i>Current tokens</i>
+      <small>
+        <i>(must have token pair)</i>
+      </small>
+      <br>
+      <textarea disabled class="col half" v-model="json_login" placeholder="json_login"></textarea>
+      <textarea disabled class="col half" v-model="json_token" placeholder="json_token"></textarea>
+      <br>
+      <button @click="fetchToken">Ask for Lease</button>
+      <small>
+        <i>15s lifespan per access token</i>
+      </small>
+    </div>
+
+    <hr>
+
+    <div>
+      <div class="col">
+        <button @click="fetchPosts">Get All Posts</button>
+      </div>
+
+      <div class="col">
+        <button @click="fetchMyPosts">Lease + Get My Posts</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="col">
+        <textarea v-model="got_posts"></textarea>
+      </div>
+
+      <div class="col">
+        <textarea v-model="got_myposts"></textarea>
+      </div>
+    </div>
+
+    <button @click="revokeLogin">Do Logout</button>
+
+    <hr>
+
+    <div>
+      <b>Auth server response</b>
+      <textarea disabled class="half" v-model="console"></textarea>
+    </div>
+
+    <small>
+      Force parameter value?
+      <br>
+      <label>
+        <input v-model="in_loginToken" placeholder="backdoor?" @blur="fetchToken">
+        use one time login
+      </label>
+      <br>
+      <label>
+        <input v-model="in_accessToken" placeholder="godmode?" @blur="fetchToken">
+        do not require token
+      </label>
+    </small>
+
+  </main>
+
+  <script type="module" src='./Fetching.js'></script>
+
+</body>
+
+</html>

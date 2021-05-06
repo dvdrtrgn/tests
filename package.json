@@ -14,11 +14,12 @@
   },
   "homepage": "https://github.com/dvdrtrgn/tests#readme",
   "scripts": {
-    "server": "nodemon JWT/server.js",
-    "secret": "node JWT/secret.js",
+    "JWT-serve-auth": "nodemon JWT/authServer.js",
+    "JWT-serve-data": "nodemon JWT/dataServer.js",
     "test": "browser-sync start --server --files **"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1"

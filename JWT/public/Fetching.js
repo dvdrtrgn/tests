@@ -1,60 +1,16 @@
 import 'https://unpkg.com/vue@2';
+import { runDelete, runGet, runPost } from './runners.js';
 
 const name = 'Fetching';
 
-function jsonSeek(str, prop) {
-  var obj = {};
+function jsonSeek(str, prop, obj = {}) {
   try {
     obj = JSON.parse(str);
   } catch (err) {}
   return obj ? obj[prop] : '';
 }
 
-function runGet(obj, key, token) {
-  let url = `http://localhost:4001/${key}`;
-
-  return fetch(url, {
-    method: 'GET',
-    headers: { Authorization: `Bearer ${token}` },
-  })
-    .then((res) => res.text())
-    .then((res) => {
-      obj['got_' + key] = res;
-      obj.console = '...' + obj.console;
-    });
-}
-
-function runPost(obj, key, payload) {
-  let url = `http://localhost:4000/${key}`;
-
-  return fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
-  })
-    .then((res) => res.text())
-    .then((res) => {
-      obj['json_' + key] = res;
-      obj.console = res;
-    });
-}
-
-function runDelete(obj, key, payload) {
-  let url = `http://localhost:4000/${key}`;
-
-  return fetch(url, {
-    method: 'DELETE',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
-  })
-    .then((res) => res.text())
-    .then((res) => {
-      obj.console = res;
-    });
-}
-
 function deferGet(app, path) {
-  app[`got_${path}`] = 'loading...';
   app.fetchToken().then(function () {
     runGet(app, path, app.accessToken);
   });
@@ -84,7 +40,7 @@ const App = (window[name] = new Vue({
       runGet(this, 'posts', token);
     },
     fetchMyPosts() {
-      this.got_myposts = '';
+      this.got_myposts = 'loading...';
       if (this.in_accessToken) {
         runGet(this, 'myposts', this.in_accessToken);
       } else {

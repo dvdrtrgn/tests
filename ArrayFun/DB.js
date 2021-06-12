@@ -1,13 +1,11 @@
 const DB = {};
 const PK = 'id'; // primary key
 
-const getObjVals = (obj) => Object.values(obj);
-const reducer = (a, b) => (a.includes(b) ? a : (a.push(b), a));
-const uniqs = (arr) => arr.reduce(reducer, []);
-const value = (arg) => (arg != null ? arg : null);
+const dedupe = (arr) => arr.filter((e, i) => arr.indexOf(e) === i);
+const valify = (arg) => (arg != null ? arg : null);
 
 function getKeys(arr) {
-  return uniqs(arr.map(Object.keys).flat());
+  return dedupe(arr.map(Object.keys).flat());
 }
 
 function getDBRecord(id) {
@@ -37,13 +35,13 @@ function addTable(arr) {
 }
 
 function getTable() {
-  const rows = getObjVals(DB);
+  const rows = Object.values(DB);
   const cols = getKeys(rows);
   const table = [cols];
 
   rows.forEach(function (rec) {
     const row = [];
-    cols.forEach((k, i) => (row[i] = value(rec[k])));
+    cols.forEach((k, i) => (row[i] = valify(rec[k])));
     table.push(row);
   });
 

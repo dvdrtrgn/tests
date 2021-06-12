@@ -52,6 +52,7 @@ export default new Vue({
       const data = DB.addTable(arr);
       this.output = JSON.stringify(data, null, 2);
       console.table(data);
+      console.dir(DB.getTable().join('\n')); // CSV
     },
   },
   computed: {},

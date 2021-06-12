@@ -1,15 +1,24 @@
 const DB = {};
 
-function getRecord(id) {
+const getObjVals = (obj) => Object.values(obj);
+const reducer = (a, b) => (a.includes(b) ? a : (a.push(b), a));
+const uniqs = (arr) => arr.reduce(reducer, []);
+const value = (arg) => (arg != null ? arg : null);
+
+function getKeys(arr) {
+  return uniqs(arr.map(Object.keys).flat());
+}
+
+function getDBRecord(id) {
   return DB[id] || (DB[id] = {});
 }
 
 function mergeToDB(obj) {
-  const record = getRecord(obj.id);
+  const record = getDBRecord(obj.id);
   Object.assign(record, obj);
 }
 
-function readRowWithKeys(row, keys) {
+function makeObjWithKeys(row, keys) {
   const entry = {};
   row.forEach((v, i) => (entry[keys[i]] = v));
   return entry;
@@ -17,13 +26,28 @@ function readRowWithKeys(row, keys) {
 
 function addTable(arr) {
   const keys = arr[0].slice();
+
   arr.forEach((row, i) => {
-    if (i) {
-      const entry = readRowWithKeys(row, keys);
-      mergeToDB(entry);
-    }
+    if (!i) return; // keys
+    const entry = makeObjWithKeys(row, keys);
+    mergeToDB(entry);
   });
+
   return DB;
 }
 
-export default { addTable, database: DB };
+function getTable() {
+  const rows = getObjVals(DB);
+  const cols = getKeys(rows);
+  const table = [cols];
+
+  rows.forEach(function (rec) {
+    const row = [];
+    cols.forEach((k, i) => (row[i] = value(rec[k])));
+    table.push(row);
+  });
+
+  return table;
+}
+
+export default { addTable, getTable, database: DB };

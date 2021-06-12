@@ -26,10 +26,9 @@ function makeObjWithKeys(row, keys) {
 }
 
 function addTable(arr) {
-  const keys = arr[0].slice();
+  const [keys, ...data] = arr;
 
-  arr.forEach((row, i) => {
-    if (!i) return; // keys
+  data.forEach((row, i) => {
     const entry = makeObjWithKeys(row, keys);
     mergeToDB(entry);
   });

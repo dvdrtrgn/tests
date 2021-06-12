@@ -1,11 +1,11 @@
 const DB = {};
 
-function getRecord(name) {
-  return DB[name] || (DB[name] = {});
+function getRecord(id) {
+  return DB[id] || (DB[id] = {});
 }
 
 function mergeToDB(obj) {
-  const record = getRecord(obj.name);
+  const record = getRecord(obj.id);
   Object.assign(record, obj);
 }
 

@@ -21,6 +21,16 @@ const arr3 = [
   ['Bob', '2', 'yes'],
   ['John', '1', 'yes'],
 ];
+const junk1 = [
+  ['id', 'name', 'odd'],
+  ['11', 'Barb', 'duck'],
+  ['12', 'Erik', 'couple'],
+];
+const junk2 = [
+  ['id', 'name', 'ball'],
+  ['11', 'Barbara'],
+  ['12', 'Skittles', 'buster'],
+];
 
 const name = 'App';
 export default new Vue({
@@ -33,6 +43,8 @@ export default new Vue({
       arr1,
       arr2,
       arr3,
+      junk1,
+      junk2,
     };
   },
   methods: {

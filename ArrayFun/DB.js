@@ -1,21 +1,8 @@
-const DB = {};
-const PK = 'id'; // primary key
+import Database from './database.js';
 
-const dedupe = (arr) => arr.filter((e, i) => arr.indexOf(e) === i);
+const DB = new Database('id'); // primary key
+
 const valify = (arg) => (arg != null ? arg : null);
-
-function getKeys(arr) {
-  return dedupe(arr.map(Object.keys).flat());
-}
-
-function getDBRecord(id) {
-  return DB[id] || (DB[id] = { [PK]: null });
-}
-
-function mergeToDB(obj) {
-  const record = getDBRecord(obj[PK]);
-  Object.assign(record, obj);
-}
 
 function makeObjWithKeys(row, keys) {
   const entry = {};
@@ -28,15 +15,13 @@ function addTable(arr) {
 
   data.forEach((row, i) => {
     const entry = makeObjWithKeys(row, keys);
-    mergeToDB(entry);
+    DB.mergeRecord(entry);
   });
-
-  return DB;
 }
 
 function getTable() {
-  const rows = Object.values(DB);
-  const cols = getKeys(rows);
+  const rows = DB.getRecords();
+  const cols = DB.getKeys();
   const table = [cols];
 
   rows.forEach(function (rec) {
@@ -53,7 +38,11 @@ function getCsv() {
 }
 
 function getJson() {
-  return JSON.stringify(DB, null, 2);
+  return DB.getJson();
 }
 
-export default { addTable, getTable, getCsv, getJson, database: DB };
+function getData() {
+  return JSON.parse(getJson());
+}
+
+export default { addTable, getTable, getCsv, getJson, getData };

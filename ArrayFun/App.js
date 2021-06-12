@@ -22,15 +22,15 @@ const arr3 = [
   ['John', '1', 'yes'],
 ];
 const junk1 = [
-  ['id', 'name', 'odd'],
-  ['11', 'Barb', 'duck'],
-  ['12', 'Erik'],
+  ['name', 'id', 'odd'],
+  ['Barb', '11', 'duck'],
+  ['Erik', '12'],
 ];
 const junk2 = [
   ['id', 'name', 'ball'],
   ['0', 'Foo'],
-  ['11', 'Barbara'],
   ['12', 'Skittles', 'buster'],
+  ['a', 'Barbara'],
 ];
 
 const name = 'App';
@@ -57,8 +57,9 @@ export default new Vue({
       this.table = DB.getTable();
 
       console.dir(DB.getCsv());
-      console.table(DB.database);
+      console.table(DB.getData());
     },
   },
   computed: {},
 });
+console.log(DB);

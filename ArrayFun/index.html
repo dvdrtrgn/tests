@@ -9,11 +9,14 @@
 </head>
 
 <body>
-  <script>
-    addToDB(arr1);
-    addToDB(arr2);
-    addToDB(arr3);
-  </script>
+  <div id="App">
+    <button @click="addToDB(arr1)">arr1</button>
+    <button @click="addToDB(arr2)">arr2</button>
+    <button @click="addToDB(arr3)">arr3</button>
+    <pre>{{ output }}</pre>
+  </div>
+
+  <script type="module" src='./App.js'></script>
 </body>
 
 </html>

@@ -6,6 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      font-family: sans-serif;
+    }
+    td {
+      border: 1px solid black;
+      padding: 0.25rem 0.5rem;
+    }
+    tbody *:first-child {
+      font-weight: 800;
+    }
+  </style>
 </head>
 
 <body>
@@ -15,6 +28,13 @@
     <button @click="addToDB(arr3)">arr3</button>
     <button @click="addToDB(junk1)">junk1</button>
     <button @click="addToDB(junk2)">junk2</button>
+
+    <table>
+      <tr v-for="row in table">
+        <td v-for="cell in row">{{ cell }}</td>
+      </tr>
+    </table>
+
     <pre>{{ output }}</pre>
   </div>
 

@@ -1,4 +1,5 @@
 const DB = {};
+const PK = 'id'; // primary key
 
 const getObjVals = (obj) => Object.values(obj);
 const reducer = (a, b) => (a.includes(b) ? a : (a.push(b), a));
@@ -10,11 +11,11 @@ function getKeys(arr) {
 }
 
 function getDBRecord(id) {
-  return DB[id] || (DB[id] = {});
+  return DB[id] || (DB[id] = { [PK]: null });
 }
 
 function mergeToDB(obj) {
-  const record = getDBRecord(obj.id);
+  const record = getDBRecord(obj[PK]);
   Object.assign(record, obj);
 }
 
@@ -50,4 +51,12 @@ function getTable() {
   return table;
 }
 
-export default { addTable, getTable, database: DB };
+function getCsv() {
+  return getTable().join('\n');
+}
+
+function getJson() {
+  return JSON.stringify(DB, null, 2);
+}
+
+export default { addTable, getTable, getCsv, getJson, database: DB };

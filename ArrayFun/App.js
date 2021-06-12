@@ -24,10 +24,11 @@ const arr3 = [
 const junk1 = [
   ['id', 'name', 'odd'],
   ['11', 'Barb', 'duck'],
-  ['12', 'Erik', 'couple'],
+  ['12', 'Erik'],
 ];
 const junk2 = [
   ['id', 'name', 'ball'],
+  ['0', 'Foo'],
   ['11', 'Barbara'],
   ['12', 'Skittles', 'buster'],
 ];
@@ -40,6 +41,7 @@ export default new Vue({
   data() {
     return {
       output: '',
+      table: [],
       arr1,
       arr2,
       arr3,
@@ -49,10 +51,13 @@ export default new Vue({
   },
   methods: {
     addToDB(arr) {
-      const data = DB.addTable(arr);
-      this.output = JSON.stringify(data, null, 2);
-      console.table(data);
-      console.dir(DB.getTable().join('\n')); // CSV
+      DB.addTable(arr);
+
+      // this.output = DB.getJson();
+      this.table = DB.getTable();
+
+      console.dir(DB.getCsv());
+      console.table(DB.database);
     },
   },
   computed: {},

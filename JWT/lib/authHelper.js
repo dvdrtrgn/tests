@@ -1,7 +1,13 @@
-require('dotenv').config({ path: process.cwd() + '/JWT/.env' });
+/* express/jwt middleware */
 
+// IMPORTS
+require('dotenv').config({ path: process.cwd() + '/JWT/.env' });
 const jwt = require('jsonwebtoken');
 
+// INITS
+const { ACCESS_TOKEN_SECRET } = process.env;
+
+// UTILS
 function getParams(req) {
   const auth = req.headers['authorization'];
   const arr = auth?.split(' ') || [];
@@ -12,8 +18,8 @@ function getParams(req) {
   };
 }
 
-function authenticateToken(req, res, next) {
-  let secret = process.env.ACCESS_TOKEN_SECRET;
+module.exports = function (req, res, next) {
+  let secret = ACCESS_TOKEN_SECRET;
   let { token } = getParams(req);
 
   if (!token) {
@@ -32,6 +38,4 @@ function authenticateToken(req, res, next) {
 
     next();
   });
-}
-
-module.exports = authenticateToken;
+};

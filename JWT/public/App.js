@@ -1,5 +1,5 @@
 import 'https://unpkg.com/vue@2';
-import { runDelete, runGet, runPost } from './runners.js';
+import ApiOps from './api-ops.js';
 
 const name = 'App';
 
@@ -12,7 +12,7 @@ function jsonSeek(str, prop, obj = {}) {
 
 function deferGet(app, path) {
   app.fetchToken().then(function () {
-    runGet(app, path, app.accessToken);
+    ApiOps.get(app, path, app.accessToken);
   });
 }
 
@@ -37,27 +37,27 @@ const App = (window[name] = new Vue({
     fetchPosts() {
       this.got_posts = '';
       let token = this.in_accessToken || this.accessToken;
-      runGet(this, 'posts', token);
+      ApiOps.get(this, 'posts', token);
     },
     fetchMyPosts() {
       this.got_myposts = 'loading...';
       if (this.in_accessToken) {
-        runGet(this, 'myposts', this.in_accessToken);
+        ApiOps.get(this, 'myposts', this.in_accessToken);
       } else {
         deferGet(this, 'myposts');
       }
     },
     fetchLogin() {
       this.in_username = this.in_username || 'Dave';
-      return runPost(this, 'login', { username: this.in_username });
+      return ApiOps.post(this, 'login', { username: this.in_username });
     },
     fetchToken() {
       let token = this.in_loginToken || this.loginToken;
-      return runPost(this, 'token', { loginToken: token });
+      return ApiOps.post(this, 'token', { loginToken: token });
     },
     revokeLogin() {
       let token = this.in_loginToken || this.loginToken;
-      runDelete(this, 'logout', { loginToken: token });
+      ApiOps.delete(this, 'logout', { loginToken: token });
       this.in_loginToken = '';
       this.json_login = '{"loginToken":"already revoked"}';
       this.json_token = '{"accessToken":"set to expire"}'; // simulate expired token

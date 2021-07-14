@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/dvdrtrgn/tests#readme",
   "scripts": {
-    "JWT-serve-auth": "nodemon JWT/authServer.js",
-    "JWT-serve-main": "nodemon JWT/mainServer.js",
+    "JWT-serve-auth": "nodemon JWT/server-auth.js",
+    "JWT-serve-main": "nodemon JWT/server-main.js",
     "test": "browser-sync start --server '<path>' --files **"
   },
   "dependencies": {

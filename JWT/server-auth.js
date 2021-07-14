@@ -1,22 +1,27 @@
-require('dotenv').config({ path: process.cwd() + '/JWT/lib/.env' });
+// IMPORTS
 
-const { ACCESS_TOKEN_SECRET, LOGIN_TOKEN_SECRET } = process.env;
-const express = require('express');
+require('dotenv').config({ path: process.cwd() + '/JWT/lib/.env' });
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
+const express = require('express');
 
-const app = express();
+// INITS
+
+const { ACCESS_TOKEN_SECRET, LOGIN_TOKEN_SECRET } = process.env;
 const loginTokens = ['backdoor!'];
-
+const app = express();
 app.use(express.json());
 app.use(cors());
+app.listen(4001);
 
-function generateAccessToken(obj) {
-  return jwt.sign(obj, ACCESS_TOKEN_SECRET, { expiresIn: '15s' });
+// UTILS
+
+function generateAccessToken(cf) {
+  return jwt.sign(cf, ACCESS_TOKEN_SECRET, { expiresIn: '15s' });
 }
 
-function generateLoginToken(obj) {
-  const token = jwt.sign(obj, LOGIN_TOKEN_SECRET);
+function generateLoginToken(cf) {
+  const token = jwt.sign(cf, LOGIN_TOKEN_SECRET);
   loginTokens.push(token);
   return token;
 }
@@ -39,6 +44,8 @@ function verifyLoginToken(token, res) {
     res.json({ accessToken });
   });
 }
+
+// ROUTES
 
 app.delete('/logout', (req, res) => {
   var token = req.body.loginToken;
@@ -65,5 +72,3 @@ app.post('/login', (req, res) => {
 
   res.json({ loginToken });
 });
-
-app.listen(4001);

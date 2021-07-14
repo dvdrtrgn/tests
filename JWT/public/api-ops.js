@@ -1,17 +1,17 @@
 const AUTH_SERVE = 'http://localhost:4001';
 const MAIN_SERVE = 'http://localhost:4000';
 
-function textify(res) {
+const respose2text = function (res) {
   console.log(res);
   return res.text();
-}
+};
 
-export function runGet(obj, key, token) {
+function runGet(obj, key, token) {
   return fetch(`${MAIN_SERVE}/${key}`, {
     method: 'GET',
     headers: { Authorization: `Bearer ${token}` },
   })
-    .then(textify)
+    .then(respose2text)
     .then((res) => {
       obj['got_' + key] = res;
       obj.console = '...' + obj.console;
@@ -19,13 +19,13 @@ export function runGet(obj, key, token) {
     .catch(console.error);
 }
 
-export function runPost(obj, key, payload) {
+function runPost(obj, key, payload) {
   return fetch(`${AUTH_SERVE}/${key}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
   })
-    .then(textify)
+    .then(respose2text)
     .then((res) => {
       obj['json_' + key] = res;
       obj.console = res;
@@ -33,13 +33,13 @@ export function runPost(obj, key, payload) {
     .catch(console.error);
 }
 
-export function runDelete(obj, key, payload) {
+function runDelete(obj, key, payload) {
   return fetch(`${AUTH_SERVE}/${key}`, {
     method: 'DELETE',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
   })
-    .then(textify)
+    .then(respose2text)
     .then((res) => {
       obj.console = res;
     })

@@ -1,5 +1,5 @@
-const AUTH_SERVE = 'http://localhost:4000';
-const DATA_SERVE = 'http://localhost:4001';
+const AUTH_SERVE = 'http://localhost:4001';
+const MAIN_SERVE = 'http://localhost:4000';
 
 function textify(res) {
   console.log(res);
@@ -7,7 +7,7 @@ function textify(res) {
 }
 
 export function runGet(obj, key, token) {
-  return fetch(`${DATA_SERVE}/${key}`, {
+  return fetch(`${MAIN_SERVE}/${key}`, {
     method: 'GET',
     headers: { Authorization: `Bearer ${token}` },
   })

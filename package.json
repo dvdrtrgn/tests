@@ -15,8 +15,8 @@
   "homepage": "https://github.com/dvdrtrgn/tests#readme",
   "scripts": {
     "JWT-serve-auth": "nodemon JWT/authServer.js",
-    "JWT-serve-data": "nodemon JWT/dataServer.js",
-    "test": "browser-sync start --server --files **"
+    "JWT-serve-main": "nodemon JWT/mainServer.js",
+    "test": "browser-sync start --server '<path>' --files **"
   },
   "dependencies": {
     "cors": "^2.8.5",

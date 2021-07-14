@@ -1,7 +1,7 @@
 import 'https://unpkg.com/vue@2';
 import { runDelete, runGet, runPost } from './runners.js';
 
-const name = 'Fetching';
+const name = 'App';
 
 function jsonSeek(str, prop, obj = {}) {
   try {

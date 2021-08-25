@@ -16,7 +16,7 @@
   "scripts": {
     "JWT-serve-auth": "nodemon JWT/server-auth.js",
     "JWT-serve-main": "nodemon JWT/server-main.js",
-    "test": "browser-sync start --server '<path>' --files **"
+    "test": "browser-sync start --server JWT/public --files **"
   },
   "dependencies": {
     "cors": "^2.8.5",

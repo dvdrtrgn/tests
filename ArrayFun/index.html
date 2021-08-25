@@ -5,25 +5,16 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      font-family: sans-serif;
-      width: 100%;
-    }
-    td {
-      border: 1px solid black;
-      padding: 0.25rem 0.5rem;
-    }
-    tbody *:first-child {
-      font-weight: 800;
-    }
-  </style>
+  <title>Arr funn db</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div id="App">
+    <h1>Combine table fragments</h1>
+    <p>
+      Load a data fragment:
+    </p>
     <button @click="addToDB(arr1)">arr1</button>
     <button @click="addToDB(arr2)">arr2</button>
     <button @click="addToDB(arr3)">arr3</button>
@@ -36,7 +27,26 @@
       </tr>
     </table>
 
-    <pre>{{ output }}</pre>
+    <p>
+      Most sample data is duplicated or unique so no collision/smudge happens.
+    </p>
+    <ul>
+      <li>figure way to preserve order (as the console table does)</li>
+      <li>try to revoke fragments (if already added)</li>
+      <li>document the CSV export</li>
+    </ul>
+
+    <div class="flex">
+      <div>
+        <b>Current table json:</b>
+        <pre>{{ output }}</pre>
+      </div>
+      <div>
+        <b>Current fragment json:</b>
+        <pre>{{ outputfrag }}</pre>
+      </div>
+
+    </div>
   </div>
 
   <script type="module" src='./App.js'></script>

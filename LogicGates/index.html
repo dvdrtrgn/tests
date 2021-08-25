@@ -1,32 +1,74 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gates Fun</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <form id="Foo">
-    <label class="button wrap"> A <input type="checkbox" name="A"></label>
-    <div class="wrap">
-      [
-      <label class="button wrap">  and <input type="checkbox" name="And"></label>
-      <label class="button wrap">  or  <input type="checkbox" name="Or"></label>
-      <label class="button wrap">  xor <input type="checkbox" name="Xor"></label>
-      ,
-      <label class="button wrap"> nand <input type="checkbox" name="Nand"></label>
-      <label class="button wrap"> nor  <input type="checkbox" name="Nor"></label>
-      <label class="button wrap"> xnor <input type="checkbox" name="Xnor"></label>
-      ]
+  <form id="GatesForm">
+    <h1>inputs</h1>
+    <div>
+      <button @click.prevent="runTests">
+        View all permutations
+      </button>
+      <pre v-show="testRez">{{ testRez }}</pre>
     </div>
-    <label class="button wrap"> B <input type="checkbox" name="B"></label>
+
+    <h2>electrical engineers call logic operations “gates”</h2>
+    <div class="flex">
+      <label> Left <input type="checkbox" v-model="left"></label>
+      <label>
+        <b>Gate</b>
+        <select v-model="choosen">
+          <option v-for="gate in gates" :key="gate">{{ gate }}</option>
+        </select>
+      </label>
+
+      <label> Right <input type="checkbox" v-model="right"></label>
+    </div>
+    <label class="protect">
+      <input type="checkbox" :checked="result">
+      <b>RESULT</b>
+    </label>
 
   </form>
-  <br>
-  <input form="Foo" type="submit">
 
-  <script src="./gates.js"></script>
+  <pre>
+  a function is like a robot that answers a single question
+  (and it needs a detail or two, in order to give an answer)
+  the details are called arguments
+
+  24 questions
+  6 binary operators (two args) each run thru 4 tests
+  1 unary (single arg, “not” meaning inverse)
+
+  A = B   (means: give to A the value of B)
+    vs
+  A === B (means: check if A is exactly equal to B)
+
+
+  REMEMBER
+    "zero based" numbers, so 0 means first item
+    an array is a list            (grocery list)
+    an object is a robust array   (contact list)
+
+    An object is a list of variables
+    AKA: an associative array,  a list that associates keys with values
+    AKA: key-value pairs means: labels and contents
+
+    Boolean/binary logic:
+      0 is false
+      1 is true
+
+  </pre>
+
+  <script type="module" src="./form.js"></script>
   <!-- <script src="./demo.js"></script> -->
-
 </body>
 
 </html>

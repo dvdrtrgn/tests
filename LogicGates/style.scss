@@ -1,0 +1,37 @@
+#GatesForm {
+  border: 1px solid gray;
+  text-align: center;
+
+  label {
+    display: inline-block;
+    font-family: sans-serif;
+    padding: 0.2rem 0.4rem;
+    width: min-content;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: center;
+  }
+  .protect {
+    pointer-events: none;
+    input {
+      opacity: 0.5;
+    }
+  }
+
+  input[type='checkbox'] {
+    zoom: 3;
+  }
+  select {
+    appearance: none;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px silver;
+    margin-top: 0.15em;
+    padding: 0.3em;
+    text-align: center;
+    text-align-last: center;
+    zoom: 2;
+  }
+}

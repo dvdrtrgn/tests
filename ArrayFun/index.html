@@ -13,12 +13,10 @@
 <body>
   <div id="App">
     <h1>Combine table fragments</h1>
-    <p>
-      Most sample data is duplicated or unique so no collision/smudge happens.
-    </p>
+    <p>Most sample data is duplicated or unique so little smudge happens.</p>
     <ul>
       <li>figure way to preserve order (as the console table does)</li>
-      <li>try to revoke fragments (if already added)</li>
+      <li><s>try to revoke fragments (if already added)</s></li>
       <li>identify collision/smudge</li>
       <li><s>switch to vue3</s></li>
       <li>option to return reactive ref-objects for values</li>
@@ -26,28 +24,43 @@
 
     <textarea>Loaded fragment {{ freshFrag }}</textarea>
 
-    <b>Load a table fragment: </b>
-    <button v-on="fragActions" name="arr1">arr1</button>
-    <button v-on="fragActions" name="arr2">arr2</button>
-    <button v-on="fragActions" name="arr3">arr3</button>
-    <button v-on="fragActions" name="junk1">junk1</button>
-    <button v-on="fragActions" name="junk2">junk2</button>
-    <div class="shrink">
-      <pre>{{ hintFrag }}</pre>
-      <table-array :table="preFrag"></table-array>
+    <div>
+      <p>
+        <b>Mesh table: {{ recordsTotal }} records ... </b>
+        <button v-if="recordsTotal" class="togbutton">
+          <label>Sort columns <input type="checkbox" v-model="sortCols"></label>
+        </button>
+      </p>
+      <table-array :table="table"></table-array>
     </div>
 
-    <hr>
+    <div>
+      <p>
+        <b>Load a table fragment: </b>
+        <button v-on="fragActions" name="arr1">arr1</button>
+        <button v-on="fragActions" name="arr2">arr2</button>
+        <button v-on="fragActions" name="arr3">arr3</button>
+        <button v-on="fragActions" name="junk1">junk1</button>
+        <button v-on="fragActions" name="junk2">junk2</button>
+      </p>
+      <div class="shrink">
+        <table-array :table="preFrag"></table-array>
+        <pre>{{ hintFrag }}</pre>
+      </div>
+    </div>
 
-    <p>
-      <b>Mesh table: {{ recordsTotal }} records ... </b>
-      <button v-if="recordsTotal" class="togbutton">
-        <label>Sort columns <input type="checkbox" v-model="sortCols"></label>
-      </button>
-    </p>
-    <table-array :table="table"></table-array>
+    <div>
+      <p>
+        <b>Wash a table fragment: </b>
+        <button v-on="fragWash" name="arr1">arr1</button>
+        <button v-on="fragWash" name="arr2">arr2</button>
+        <button v-on="fragWash" name="arr3">arr3</button>
+        <button v-on="fragWash" name="junk1">junk1</button>
+        <button v-on="fragWash" name="junk2">junk2</button>
+      </p>
+    </div>
 
-    <div class="flex">
+    <section class="flex">
       <div>
         <b>Current mesh table:</b>
         <pre>{{ table }}</pre>
@@ -58,7 +71,7 @@
         <b>Current mesh json:</b>
         <pre>{{ json }}</pre>
       </div>
-    </div>
+    </section>
   </div>
 
   <script type="module" src='./App.js'></script>

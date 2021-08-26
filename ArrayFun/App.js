@@ -24,20 +24,27 @@ export default Vue.createApp({
   },
   methods: {
     previewFrag(nom) {
-      let frag = frags[nom];
+      let frag = frags.copy(nom);
       let hint = frag.join(' | ');
 
       this.preFrag = frag;
       this.hintFrag = hint;
     },
     addToDB(nom) {
-      let frag = frags[nom];
+      let frag = frags.copy(nom);
 
       this.freshFrag = frag;
-      Mesh.addTable(this.freshFrag);
+      Mesh.applyTable(this.freshFrag);
       this.update();
 
       console.table(Mesh.listObjects());
+    },
+    wipeFromDB(nom) {
+      let frag = frags.copy(nom);
+
+      this.freshFrag = frag;
+      Mesh.redactTable(this.freshFrag);
+      this.update();
     },
     update() {
       Mesh.colSort(this.sortCols);
@@ -55,6 +62,11 @@ export default Vue.createApp({
       return {
         click: (evt) => this.addToDB(evt.target.name),
         mouseover: (evt) => this.previewFrag(evt.target.name),
+      };
+    },
+    fragWash() {
+      return {
+        click: (evt) => this.wipeFromDB(evt.target.name),
       };
     },
   },

@@ -1,3 +1,5 @@
+const clone = (obj) => JSON.parse(JSON.stringify(obj));
+
 export const arr1 = [
   ['name', 'id', 'age', 'weight', 'Cool'],
   ['Susan', '3', '20', '120', true],
@@ -27,13 +29,20 @@ export const junk2 = [
   ['Foo'],
   ['buster', 'Skittles', 12],
   ['sports', 'Barbara', 'a'],
-  [ , 'Bennny', 4],
+  [, 'Bennny', 4],
 ];
 
-export default {
+const API = {
   arr1,
   arr2,
   arr3,
   junk1,
   junk2,
+  copy: (nom) => {
+    if (API[nom]) {
+      return clone(API[nom]);
+    }
+  },
 };
+
+export default API;

@@ -21,6 +21,7 @@ export default new Vue({
       arr3,
       junk1,
       junk2,
+      recordsTotal: 0,
     };
   },
   methods: {
@@ -31,6 +32,7 @@ export default new Vue({
       this.csv = Mesh.getCsv();
       this.json = Mesh.getJson();
       this.table = Mesh.listArrays();
+      this.recordsTotal = this.table.length - 1;
 
       console.table(Mesh.listObjects());
     },

@@ -19,6 +19,8 @@
       <li>figure way to preserve order (as the console table does)</li>
       <li>try to revoke fragments (if already added)</li>
       <li>identify collision/smudge</li>
+      <li>switch to vue3</li>
+      <li>option to return reactive ref-objects for values</li>
     </ul>
 
     <b>Load a data fragment:</b>
@@ -30,7 +32,7 @@
     <textarea>Current fragment {{ outputfrag }}</textarea>
     <hr>
 
-    <b>Mesh table:</b>
+    <b>Mesh table: {{ recordsTotal }} records</b>
     <table>
       <tr v-for="row in table">
         <td v-for="cell in row">{{ cell }}</td>

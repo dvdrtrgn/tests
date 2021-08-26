@@ -21,11 +21,12 @@ function addTable(arr) {
 
 function listArrays() {
   const rows = DB.records;
-  const table = [DB.keys];
+  const keys = DB.keys;
+  const table = [keys];
 
   rows.forEach(function (rec) {
     const row = [];
-    DB.keys.forEach((k, i) => (row[i] = rec[k]));
+    keys.forEach((k, i) => (row[i] = rec[k]));
     table.push(row);
   });
 

@@ -23,10 +23,10 @@ export const junk1 = [
   ['Erik', '12', , , 'goof'],
 ];
 export const junk2 = [
-  ['id', 'name', 'ball'],
-  ['0', 'Foo'],
-  ['12', 'Skittles', 'buster'],
-  ['a', 'Barbara', 'sports'],
+  ['ball', 'name', 'id'],
+  ['Foo'],
+  ['buster', 'Skittles', 12],
+  ['sports', 'Barbara', 'a'],
 ];
 
 export default {

@@ -1,5 +1,9 @@
 const dedupe = (arr) => arr.filter((e, i) => arr.indexOf(e) === i);
 
+function makeRecord(self, pk) {
+  return (self._db[pk] = { [self._pk]: null });
+}
+
 class Database {
   constructor(primaryKey) {
     this._db = {}; // data holder
@@ -8,8 +12,11 @@ class Database {
     console.log('construct', this);
   }
 
-  getRecordById(id) {
-    return this._db[id] || (this._db[id] = { [this._pk]: null });
+  getRecordById(pk) {
+    if (!pk)
+      throw `Database! must have a primary key of "${this._pk}" to get/set record`;
+    let record = this._db[pk];
+    return record || makeRecord(this, pk);
   }
 
   mergeRecordObj(obj) {

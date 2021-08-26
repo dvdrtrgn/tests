@@ -14,12 +14,17 @@ function addTable(arr) {
   const [keys, ...data] = arr;
 
   data.forEach((row, i) => {
-    const entry = makeObjWithKeys(row, keys);
-    DB.mergeRecordObj(entry);
+    try {
+      const entry = makeObjWithKeys(row, keys);
+      DB.mergeRecordObj(entry);
+    } catch (err) {
+      console.error(`Tried adding "${row[0]}"...`, err);
+    }
   });
 }
 
-function listArrays() { // 2d array (Asv: array separated values)
+function listArrays() {
+  // 2d array (Asv: array separated values)
   const rows = DB.records;
   const keys = DB.keys;
   const table = [keys];

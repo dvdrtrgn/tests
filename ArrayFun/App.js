@@ -15,7 +15,8 @@ export default Vue.createApp({
     return {
       csv: '',
       json: '',
-      outputfrag: [],
+      preFrag: [],
+      freshFrag: [],
       table: [[null]],
     };
   },
@@ -23,15 +24,14 @@ export default Vue.createApp({
     previewFrag(nom) {
       let frag = frags[nom];
       let hint = frag.join(' | ');
-      this.outputfrag = frag;
 
-      console.log('hint', hint);
+      this.preFrag = frag;
     },
     addToDB(nom) {
       let frag = frags[nom];
 
-      this.outputfrag = frag;
-      Mesh.addTable(this.outputfrag);
+      this.freshFrag = frag;
+      Mesh.addTable(this.freshFrag);
 
       this.csv = Mesh.getCsv(); // string
       this.json = Mesh.getJson(); // string
@@ -43,6 +43,12 @@ export default Vue.createApp({
   computed: {
     recordsTotal() {
       return this.table.length - 1;
+    },
+    fragActions() {
+      return {
+        click: (evt) => this.addToDB(evt.target.name),
+        mouseover: (evt) => this.previewFrag(evt.target.name),
+      };
     },
   },
 }).mount(`#${name}`);

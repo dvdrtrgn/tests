@@ -25,13 +25,13 @@
     </ul>
 
     <b>Load a table fragment: </b>
-    <button @mouseover="previewFrag('arr1')" @click="addToDB('arr1')">arr1</button>
-    <button @mouseover="previewFrag('arr2')" @click="addToDB('arr2')">arr2</button>
-    <button @mouseover="previewFrag('arr3')" @click="addToDB('arr3')">arr3</button>
-    <button @mouseover="previewFrag('junk1')" @click="addToDB('junk1')">junk1</button>
-    <button @mouseover="previewFrag('junk2')" @click="addToDB('junk2')">junk2</button>
-    <textarea>Current fragment {{ outputfrag }}</textarea>
-    <table-array class="shrink" :table="outputfrag"></table-array>
+    <button v-on="fragActions" name="arr1">arr1</button>
+    <button v-on="fragActions" name="arr2">arr2</button>
+    <button v-on="fragActions" name="arr3">arr3</button>
+    <button v-on="fragActions" name="junk1">junk1</button>
+    <button v-on="fragActions" name="junk2">junk2</button>
+    <textarea>Loaded fragment {{ freshFrag }}</textarea>
+    <table-array class="shrink" :table="preFrag"></table-array>
 
     <hr>
 

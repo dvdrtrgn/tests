@@ -1,9 +1,11 @@
 const template = /* html */ `
-  <table>
+<table>
+  <tbody>
     <tr v-for="row in table">
       <td v-for="cell in row">{{ cell }}</td>
     </tr>
-  </table>
+  </tbody>
+</table>
 `;
 
 export default {

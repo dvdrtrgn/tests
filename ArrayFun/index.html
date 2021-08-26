@@ -36,28 +36,21 @@
 
     <div>
       <p>
-        <b>Load a table fragment: </b>
+        <b>Apply a table fragment: </b>
         <button v-on="fragActions" name="arr1">arr1</button>
         <button v-on="fragActions" name="arr2">arr2</button>
         <button v-on="fragActions" name="arr3">arr3</button>
         <button v-on="fragActions" name="junk1">junk1</button>
         <button v-on="fragActions" name="junk2">junk2</button>
+        ...
+        <button v-if="recordsTotal" class="togbutton">
+          <label>Redact mode <input type="checkbox" v-model="redactMode"></label>
+        </button>
       </p>
       <div class="shrink">
-        <table-array :table="preFrag"></table-array>
         <pre>{{ hintFrag }}</pre>
+        <table-array :table="preFrag"></table-array>
       </div>
-    </div>
-
-    <div>
-      <p>
-        <b>Wash a table fragment: </b>
-        <button v-on="fragWash" name="arr1">arr1</button>
-        <button v-on="fragWash" name="arr2">arr2</button>
-        <button v-on="fragWash" name="arr3">arr3</button>
-        <button v-on="fragWash" name="junk1">junk1</button>
-        <button v-on="fragWash" name="junk2">junk2</button>
-      </p>
     </div>
 
     <section class="flex">

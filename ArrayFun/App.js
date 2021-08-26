@@ -20,15 +20,16 @@ export default Vue.createApp({
       freshFrag: [],
       table: [[null]],
       sortCols: false,
+      redactMode: false,
     };
   },
   methods: {
     previewFrag(nom) {
-      let frag = frags.copy(nom);
+      let frag = frags.copy(nom) || [];
       let hint = frag.join(' | ');
 
       this.preFrag = frag;
-      this.hintFrag = hint;
+      if (nom) this.hintFrag = hint;
     },
     addToDB(nom) {
       let frag = frags.copy(nom);
@@ -60,13 +61,15 @@ export default Vue.createApp({
     },
     fragActions() {
       return {
-        click: (evt) => this.addToDB(evt.target.name),
+        click: (evt) => {
+          if (this.redactMode) {
+            this.wipeFromDB(evt.target.name);
+          } else {
+            this.addToDB(evt.target.name);
+          }
+        },
         mouseover: (evt) => this.previewFrag(evt.target.name),
-      };
-    },
-    fragWash() {
-      return {
-        click: (evt) => this.wipeFromDB(evt.target.name),
+        mouseleave: (evt) => this.previewFrag(),
       };
     },
   },

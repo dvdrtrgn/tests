@@ -47,8 +47,12 @@ textarea {
 
 .shrink {
   font-family: monospace;
-  zoom: 0.8;
+  height: 3rem;
+  position: relative;
+  z-index: 1;
+  zoom: 0.7;
   td {
+    background-color: wheat;
     border-style: dashed;
   }
 }

@@ -1,14 +1,14 @@
 /* global Vue, */
-import 'https://unpkg.com/vue@2';
+// import { createApp } from 'https://unpkg.com/vue@3.2.6/dist/vue.esm-browser.js';
+
 import Mesh from './datamesh.js';
 import { arr1, arr2, arr3, junk1, junk2 } from './tablefrags.js';
 
 console.log('Mesh', Mesh);
 
 const name = 'App';
-export default new Vue({
+export default Vue.createApp({
   name,
-  el: `#${name}`,
   components: {},
   data() {
     return {
@@ -38,4 +38,4 @@ export default new Vue({
     },
   },
   computed: {},
-});
+}).mount(`#${name}`);

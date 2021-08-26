@@ -1,3 +1,5 @@
+let SORT_KEYS = false;
+
 const dedupe = (arr) => arr.filter((e, i) => arr.indexOf(e) === i);
 
 function makeRecord(self, pk) {
@@ -28,9 +30,10 @@ class Database {
   }
 
   get keys() {
-    return this._ks.slice().sort((a, b) => {
+    const copy = this._ks.slice();
+    return copy.sort((a, b) => {
       if (b === this._pk) return 1; // force primary key to start
-      return a < b ? -1 : 1;
+      if (SORT_KEYS) return a < b ? -1 : 1;
     });
   }
   get records() {
@@ -41,6 +44,13 @@ class Database {
   }
   get readableJson() {
     return JSON.stringify(this.records, null, 2);
+  }
+
+  get sort () {
+    return SORT_KEYS;
+  }
+  set sort (bool) {
+    SORT_KEYS = Boolean(bool);
   }
 }
 

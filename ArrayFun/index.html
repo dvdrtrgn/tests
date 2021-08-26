@@ -24,24 +24,28 @@
       <li>option to return reactive ref-objects for values</li>
     </ul>
 
+    <textarea>Loaded fragment {{ freshFrag }}</textarea>
+
     <b>Load a table fragment: </b>
     <button v-on="fragActions" name="arr1">arr1</button>
     <button v-on="fragActions" name="arr2">arr2</button>
     <button v-on="fragActions" name="arr3">arr3</button>
     <button v-on="fragActions" name="junk1">junk1</button>
     <button v-on="fragActions" name="junk2">junk2</button>
-
-    <textarea>Loaded fragment {{ freshFrag }}</textarea>
-    <table-array class="shrink" :table="preFrag"></table-array>
+    <div class="shrink">
+      <pre>{{ hintFrag }}</pre>
+      <table-array :table="preFrag"></table-array>
+    </div>
 
     <hr>
 
-    <b>Mesh table: {{ recordsTotal }} records</b>
-    <table>
-      <tr v-for="row in table">
-        <td v-for="cell in row">{{ cell }}</td>
-      </tr>
-    </table>
+    <p>
+      <b>Mesh table: {{ recordsTotal }} records ... </b>
+      <button v-if="recordsTotal" class="togbutton">
+        <label>Sort columns <input type="checkbox" v-model="sortCols"></label>
+      </button>
+    </p>
+    <table-array :table="table"></table-array>
 
     <div class="flex">
       <div>

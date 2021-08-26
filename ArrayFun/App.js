@@ -15,9 +15,11 @@ export default Vue.createApp({
     return {
       csv: '',
       json: '',
+      hintFrag: '',
       preFrag: [],
       freshFrag: [],
       table: [[null]],
+      sortCols: false,
     };
   },
   methods: {
@@ -26,18 +28,23 @@ export default Vue.createApp({
       let hint = frag.join(' | ');
 
       this.preFrag = frag;
+      this.hintFrag = hint;
     },
     addToDB(nom) {
       let frag = frags[nom];
 
       this.freshFrag = frag;
       Mesh.addTable(this.freshFrag);
+      this.update();
+
+      console.table(Mesh.listObjects());
+    },
+    update() {
+      Mesh.colSort(this.sortCols);
 
       this.csv = Mesh.getCsv(); // string
       this.json = Mesh.getJson(); // string
       this.table = Mesh.listArrays(); // "table" is a 2d array
-
-      console.table(Mesh.listObjects());
     },
   },
   computed: {
@@ -49,6 +56,11 @@ export default Vue.createApp({
         click: (evt) => this.addToDB(evt.target.name),
         mouseover: (evt) => this.previewFrag(evt.target.name),
       };
+    },
+  },
+  watch: {
+    sortCols() {
+      this.update();
     },
   },
 }).mount(`#${name}`);

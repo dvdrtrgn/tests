@@ -27,6 +27,7 @@ export const junk2 = [
   ['Foo'],
   ['buster', 'Skittles', 12],
   ['sports', 'Barbara', 'a'],
+  [ , 'Bennny', 4],
 ];
 
 export default {

@@ -19,7 +19,7 @@ function addTable(arr) {
   });
 }
 
-function listArrays() {
+function listArrays() { // 2d array (Asv: array separated values)
   const rows = DB.records;
   const keys = DB.keys;
   const table = [keys];

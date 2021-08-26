@@ -13,6 +13,7 @@ class Database {
   }
 
   mergeRecordObj(obj) {
+    // row object
     const record = this.getRecordById(obj[this._pk]);
     Object.assign(record, obj);
 

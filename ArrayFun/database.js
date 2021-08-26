@@ -1,34 +1,38 @@
 const dedupe = (arr) => arr.filter((e, i) => arr.indexOf(e) === i);
 
 class Database {
-  constructor(pk) {
-    this._db = {};
-    this._pk = pk;
-    this._keys = [];
-    console.log(this);
+  constructor(primaryKey) {
+    this._db = {}; // data holder
+    this._ks = []; // keys holder
+    this._pk = primaryKey;
+    console.log('construct', this);
   }
 
-  getJson() {
-    return JSON.stringify(this.getRecords(), null, 2);
-  }
-  getKeys() {
-    return this._keys.slice().sort((a, b) => {
-      if (b === this._pk) return 1;
-      else return a < b ? -1 : 1;
-    });
-  }
-  getRecord(id) {
+  getRecordById(id) {
     return this._db[id] || (this._db[id] = { [this._pk]: null });
   }
-  getRecords() {
-    return Object.values(this._db);
-  }
 
-  mergeRecord(obj) {
-    const record = this.getRecord(obj[this._pk]);
+  mergeRecordObj(obj) {
+    const record = this.getRecordById(obj[this._pk]);
     Object.assign(record, obj);
 
-    this._keys = dedupe([...this._keys, ...Object.keys(record)]);
+    this._ks = dedupe([...this._ks, ...Object.keys(record)]);
+  }
+
+  get keys() {
+    return this._ks.slice().sort((a, b) => {
+      if (b === this._pk) return 1; // force primary key to start
+      return a < b ? -1 : 1;
+    });
+  }
+  get records() {
+    return Object.values(this._db);
+  }
+  get json() {
+    return JSON.stringify(this.records);
+  }
+  get readableJson() {
+    return JSON.stringify(this.records, null, 2);
   }
 }
 

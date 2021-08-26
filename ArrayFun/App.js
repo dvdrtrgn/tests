@@ -3,6 +3,8 @@ import 'https://unpkg.com/vue@2';
 import Mesh from './datamesh.js';
 import { arr1, arr2, arr3, junk1, junk2 } from './tablefrags.js';
 
+console.log('Mesh', Mesh);
+
 const name = 'App';
 export default new Vue({
   name,
@@ -10,9 +12,10 @@ export default new Vue({
   components: {},
   data() {
     return {
-      output: 'nothin',
-      outputfrag: 'nothin',
-      table: [],
+      csv: '',
+      json: '',
+      outputfrag: null,
+      table: [[null]],
       arr1,
       arr2,
       arr3,
@@ -22,16 +25,15 @@ export default new Vue({
   },
   methods: {
     addToDB(arr) {
-      this.outputfrag = (arr);
+      this.outputfrag = arr;
       Mesh.addTable(arr);
 
-      this.output = Mesh.getJson();
-      this.table = Mesh.getTable();
+      this.csv = Mesh.getCsv();
+      this.json = Mesh.getJson();
+      this.table = Mesh.listArrays();
 
-      console.dir(Mesh.getCsv());
-      console.table(Mesh.getData());
+      console.table(Mesh.listObjects());
     },
   },
   computed: {},
 });
-console.log(Mesh);

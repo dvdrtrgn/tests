@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arr funn db</title>
+  <title>Table array fun mesh</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,39 +13,41 @@
   <div id="App">
     <h1>Combine table fragments</h1>
     <p>
-      Load a data fragment:
+      Most sample data is duplicated or unique so no collision/smudge happens.
     </p>
+    <ul>
+      <li>figure way to preserve order (as the console table does)</li>
+      <li>try to revoke fragments (if already added)</li>
+      <li>identify collision/smudge</li>
+    </ul>
+
+    <b>Load a data fragment:</b>
     <button @click="addToDB(arr1)">arr1</button>
     <button @click="addToDB(arr2)">arr2</button>
     <button @click="addToDB(arr3)">arr3</button>
     <button @click="addToDB(junk1)">junk1</button>
     <button @click="addToDB(junk2)">junk2</button>
+    <textarea>Current fragment {{ outputfrag }}</textarea>
+    <hr>
 
+    <b>Mesh table:</b>
     <table>
       <tr v-for="row in table">
         <td v-for="cell in row">{{ cell }}</td>
       </tr>
     </table>
 
-    <p>
-      Most sample data is duplicated or unique so no collision/smudge happens.
-    </p>
-    <ul>
-      <li>figure way to preserve order (as the console table does)</li>
-      <li>try to revoke fragments (if already added)</li>
-      <li>document the CSV export</li>
-    </ul>
-
     <div class="flex">
       <div>
-        <b>Current table json:</b>
-        <pre>{{ output }}</pre>
+        <b>Current mesh table:</b>
+        <pre>{{ table }}</pre>
       </div>
       <div>
-        <b>Current fragment json:</b>
-        <pre>{{ outputfrag }}</pre>
+        <b>Current mesh csv:</b>
+        <pre>{{ csv }}</pre>
+        <b>Current mesh json:</b>
+        <pre>{{ json }}</pre>
       </div>
-
     </div>
   </div>
 

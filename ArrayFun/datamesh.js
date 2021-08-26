@@ -1,46 +1,39 @@
 import Database from './database.js';
 
 const DB = new Database('id'); // primary key
-const valify = (arg) => (arg != null ? arg : null);
+
 const makeObjWithKeys = (row, keys) => {
   const entry = {};
   row.forEach((v, i) => (entry[keys[i]] = v));
   return entry;
 };
 
+// PUBLIC
+
 function addTable(arr) {
   const [keys, ...data] = arr;
 
   data.forEach((row, i) => {
     const entry = makeObjWithKeys(row, keys);
-    DB.mergeRecord(entry);
+    DB.mergeRecordObj(entry);
   });
 }
 
-function getTable() {
-  const rows = DB.getRecords();
-  const cols = DB.getKeys();
-  const table = [cols];
+function listArrays() {
+  const rows = DB.records;
+  const table = [DB.keys];
 
   rows.forEach(function (rec) {
     const row = [];
-    cols.forEach((k, i) => (row[i] = valify(rec[k])));
+    DB.keys.forEach((k, i) => (row[i] = rec[k]));
     table.push(row);
   });
 
   return table;
 }
 
-function getCsv() {
-  return getTable().join('\n');
-}
+const getCsv = () => listArrays().join('\n');
+const getJson = () => DB.readableJson;
+const listObjects = () => JSON.parse(DB.json);
 
-function getJson() {
-  return DB.getJson();
-}
-
-function getData() {
-  return JSON.parse(getJson());
-}
-
-export default { addTable, getTable, getCsv, getJson, getData };
+export default { addTable, listArrays, getCsv, getJson, listObjects };

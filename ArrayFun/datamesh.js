@@ -1,14 +1,12 @@
 import Database from './database.js';
 
 const DB = new Database('id'); // primary key
-
 const valify = (arg) => (arg != null ? arg : null);
-
-function makeObjWithKeys(row, keys) {
+const makeObjWithKeys = (row, keys) => {
   const entry = {};
   row.forEach((v, i) => (entry[keys[i]] = v));
   return entry;
-}
+};
 
 function addTable(arr) {
   const [keys, ...data] = arr;

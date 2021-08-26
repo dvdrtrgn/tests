@@ -1,6 +1,6 @@
 /* global Vue, */
 import 'https://unpkg.com/vue@2';
-import DB from './DB.js';
+import Mesh from './datamesh.js';
 import { arr1, arr2, arr3, junk1, junk2 } from './tablefrags.js';
 
 const name = 'App';
@@ -23,15 +23,15 @@ export default new Vue({
   methods: {
     addToDB(arr) {
       this.outputfrag = (arr);
-      DB.addTable(arr);
+      Mesh.addTable(arr);
 
-      this.output = DB.getJson();
-      this.table = DB.getTable();
+      this.output = Mesh.getJson();
+      this.table = Mesh.getTable();
 
-      console.dir(DB.getCsv());
-      console.table(DB.getData());
+      console.dir(Mesh.getCsv());
+      console.table(Mesh.getData());
     },
   },
   computed: {},
 });
-console.log(DB);
+console.log(Mesh);

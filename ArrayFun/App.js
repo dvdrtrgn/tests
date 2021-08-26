@@ -70,6 +70,7 @@ export default Vue.createApp({
         },
         mouseover: (evt) => this.previewFrag(evt.target.name),
         mouseleave: (evt) => this.previewFrag(),
+        mousedown: (evt) => this.previewFrag(),
       };
     },
   },

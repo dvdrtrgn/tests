@@ -47,10 +47,13 @@ textarea {
 
 .shrink {
   font-family: monospace;
-  height: 3rem;
+  height: 2rem;
   position: relative;
   z-index: 1;
   zoom: 0.7;
+  table {
+    opacity: 0.9;
+  }
   td {
     background-color: wheat;
     border-style: dashed;

@@ -22,24 +22,14 @@
       <li>option to return reactive ref-objects for values</li>
     </ul>
 
-    <textarea>Loaded fragment {{ freshFrag }}</textarea>
-
-    <div>
-      <p>
-        <b>Mesh table: {{ recordsTotal }} records ... </b>
-        <button v-if="recordsTotal" class="togbutton">
-          <label>Sort columns <input type="checkbox" v-model="sortCols"></label>
-        </button>
-      </p>
-      <table-array :table="table"></table-array>
-    </div>
+    <textarea>Applied fragment {{ freshFrag }}</textarea>
 
     <div>
       <p>
         <b>Apply a table fragment: </b>
-        <button v-on="fragActions" name="arr1">arr1</button>
-        <button v-on="fragActions" name="arr2">arr2</button>
-        <button v-on="fragActions" name="arr3">arr3</button>
+        <button v-on="fragActions" name="gen">gen</button>
+        <button v-on="fragActions" name="hgt">hgt</button>
+        <button v-on="fragActions" name="par">par</button>
         <button v-on="fragActions" name="junk1">junk1</button>
         <button v-on="fragActions" name="junk2">junk2</button>
         ...
@@ -51,6 +41,16 @@
         <pre>{{ hintFrag }}</pre>
         <table-array :table="preFrag"></table-array>
       </div>
+    </div>
+
+    <div>
+      <p>
+        <b>Mesh table: {{ recordsTotal }} records ... </b>
+        <button v-if="recordsTotal" class="togbutton">
+          <label>Sort columns <input type="checkbox" v-model="sortCols"></label>
+        </button>
+      </p>
+      <table-array :table="table"></table-array>
     </div>
 
     <section class="flex">

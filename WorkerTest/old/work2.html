@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title>Shared Workers basic example</title>
+</head>
+
+<body>
+  <h1>Shared Workers basic example 2</h1>
+  <div class="controls" tabindex="0">
+    <form>
+      <div>
+        <label for="number1">Square number: </label>
+        <input type="text" id="number1" value="0">
+      </div>
+      <div>
+        <label for="number2">Square number: </label>
+        <input type="text" id="number2" value="0">
+      </div>
+    </form>
+    <pre class="result"></pre>
+  </div>
+
+  <p><a href="work1.html" target="w1">Open worker page 1</a></p>
+
+  <script>
+    document.querySelector('form').onsubmit = e => e.preventDefault();
+    var n1 = document.querySelector('#number1');
+    var n2 = document.querySelector('#number2');
+    var result = document.querySelector('.result');
+
+    var work1 = new Worker('worker-simple.js', { name: 'foo1' });
+    var work2 = new SharedWorker('worker-shared.js', { name: 'foo2' }).port;
+
+    n1.onchange = () => work1.postMessage([n1.value, n1.value]);
+    n2.onchange = () => work2.postMessage([n2.value, n2.value]);
+
+    function handleMessage(evt) {
+      if (evt.data.log) {
+        console.log(evt.data, JSON.stringify(evt.data.log));
+      } else {
+        result.textContent = evt.data;
+      }
+    }
+    work1.onmessage = handleMessage;
+    work2.onmessage = handleMessage;
+  </script>
+</body>
+
+</html>

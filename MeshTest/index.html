@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Table array fun mesh</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@3.2.6"></script>
+</head>
+
+<body>
+  <div id="App">
+    <h1>Combine table fragments</h1>
+    <p>Most sample data is duplicated or unique so little smudge happens.</p>
+    <ul>
+      <li>figure way to preserve order (as the console table does)</li>
+      <li><s>try to revoke fragments (if already added)</s></li>
+      <li>identify collision/smudge</li>
+      <li><s>switch to vue3</s></li>
+      <li>option to return reactive ref-objects for values</li>
+    </ul>
+
+    <textarea>Applied fragment {{ freshFrag }}</textarea>
+
+    <div>
+      <p>
+        <b>Apply a table fragment: </b>
+        <button v-on="fragActions" name="gen">gen</button>
+        <button v-on="fragActions" name="hgt">hgt</button>
+        <button v-on="fragActions" name="par">par</button>
+        <button v-on="fragActions" name="junk1">junk1</button>
+        <button v-on="fragActions" name="junk2">junk2</button>
+        ...
+        <button v-if="recordsTotal" class="togbutton">
+          <label>Redact mode <input type="checkbox" v-model="redactMode"></label>
+        </button>
+      </p>
+      <div class="shrink">
+        <pre>{{ hintFrag }}</pre>
+        <table-array :table="preFrag"></table-array>
+      </div>
+    </div>
+
+    <div>
+      <p>
+        <b>Mesh table: {{ recordsTotal }} records ... </b>
+        <button v-if="recordsTotal" class="togbutton">
+          <label>Sort columns <input type="checkbox" v-model="sortCols"></label>
+        </button>
+      </p>
+      <table-array :table="table"></table-array>
+    </div>
+
+    <section class="flex">
+      <div>
+        <b>Current mesh table:</b>
+        <pre>{{ table }}</pre>
+      </div>
+      <div>
+        <b>Current mesh csv:</b>
+        <pre>{{ csv }}</pre>
+        <b>Current mesh json:</b>
+        <pre>{{ json }}</pre>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src='./App.js'></script>
+</body>
+
+</html>

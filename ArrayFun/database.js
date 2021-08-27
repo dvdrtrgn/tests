@@ -42,13 +42,6 @@ class Database {
   get records() {
     return Object.values(this._db);
   }
-  get json() {
-    return JSON.stringify(this.records);
-  }
-  get readableJson() {
-    return JSON.stringify(this.records, null, 2);
-  }
-
   get sort() {
     return SORT_KEYS;
   }

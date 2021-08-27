@@ -52,7 +52,7 @@ export default Vue.createApp({
 
       this.csv = Mesh.getCsv(); // string
       this.json = Mesh.getJson(); // string
-      this.table = Mesh.listArrays(); // "table" is a 2d array
+      this.table = Mesh.generateTable(); // "table" is a 2d array
     },
   },
   computed: {

@@ -1,15 +1,11 @@
 import Database from './database.js';
+import { nullish, rowhash, deepstring } from './datautils.js';
 
 const PKEY = 'id';
 const BASE = new Database(PKEY); // primary key
 
-const nullish = (val) => val == undefined;
-
-const makeObjWithKeys = (row, keys) => {
-  const entry = {};
-  row.forEach((v, i) => (entry[keys[i]] = v));
-  return entry;
-};
+const json = () => JSON.stringify(BASE.records);
+const readableJson = () => JSON.stringify(BASE.records, null, 2);
 
 // PUBLIC
 
@@ -18,7 +14,7 @@ function applyTable(arr) {
 
   data.forEach((row, i) => {
     try {
-      const entry = makeObjWithKeys(row, keys);
+      const entry = rowhash(row, keys);
       BASE.mergeRecordObj(entry);
     } catch (err) {
       console.error(`Tried adding "${row[0]}"...`, err);
@@ -37,7 +33,7 @@ function redactTable(arr) {
   applyTable(arr);
 }
 
-function listArrays() {
+function generateTable() {
   // 2d array (Asv: array separated values)
   const rows = BASE.records;
   const keys = BASE.keys;
@@ -52,9 +48,9 @@ function listArrays() {
   return table;
 }
 
-const getCsv = () => listArrays().join('\n');
-const getJson = () => BASE.readableJson;
-const listObjects = () => JSON.parse(BASE.json);
+const getCsv = () => generateTable().map(deepstring).join('\n');
+const getJson = () => readableJson();
+const listObjects = () => JSON.parse(json());
 const colSort = (val) => {
   if (!nullish(val)) BASE.sort = Boolean(val);
   return BASE.sort;
@@ -65,7 +61,7 @@ export default {
   colSort,
   getCsv,
   getJson,
-  listArrays,
+  generateTable,
   listObjects,
   redactTable,
 };

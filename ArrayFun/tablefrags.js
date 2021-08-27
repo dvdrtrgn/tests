@@ -22,14 +22,14 @@ export const par = [
 export const junk1 = [
   ['name', 'id', 'odd', 'Cool', 'ball'],
   ['Barb', '11', 'duck', true],
-  ['Erik', '12', , , 'goof'],
+  ['Erik', '12', { viking: false }, , 'goof'],
 ];
 export const junk2 = [
   ['ball', 'name', 'id'],
   ['Foo'],
   ['buster', 'Skittles', 12],
-  ['sports', 'Barbara', 'a'],
-  [, 'Bennny', 4],
+  ['high,sports', 'Barbara', 'a'],
+  [['nut', 8], 'Bennny', 4],
 ];
 
 const API = {

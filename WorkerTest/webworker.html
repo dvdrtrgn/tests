@@ -27,7 +27,24 @@
       <label>Product: {{ product }} </label>
     </form>
 
-    <button @click="pester">pester log</button>
+    <div>
+      <h2>Controls</h2>
+      <button @click="linger">linger</button>
+      <label>
+        <b>Slow time by:</b>
+        <input type="range" min="0" max="1234" v-model.lazy="delay">
+        <input type="number" v-model.number="delay">
+      </label>
+    </div>
+
+    <div>
+      <p><b>Output</b></p>
+      <input disabled type="text" size="30" :value="reporter">
+      <button @click="pester">pester log</button>
+      <br>
+      <textarea disabled cols="60" rows="10">{{ console }}</textarea>
+    </div>
+
   </div>
 
   <script type="module" src="app.js"></script>

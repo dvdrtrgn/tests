@@ -1,48 +1,51 @@
-// importScripts('//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js');
-// console.log(`From worker: worker started at ${moment().format('HH:mm:ss')}`);
+/*global FULLNAME, NAME, */
 
-const defer = (fn) => setTimeout(fn, DELAY);
+const defer = (fn) => setTimeout(fn, Pulse.delay);
 
-let COUNT = 1;
-
-function startMsg(msg) {
+function startMsg(msg, extra) {
   const obj = {
-    '#': COUNT,
-    from: FULLNAME,
-    delay: DELAY,
+    _meta_: {
+      num: (Pulse.count += 1),
+      from: FULLNAME,
+      delay: Pulse.delay,
+    },
+    message: 'Pulse ' + NAME,
   };
 
   if (msg) {
-    COUNT += 1;
-    obj.msg = msg; // obj[msg] = null;
+    obj.message = msg === '???' ? '' : msg;
+    // obj[msg] = extra;
   } else {
-    obj.log = { msg: 'Pulse ' + NAME };
+    obj.log = true;
   }
-  return obj;
+  return Object.assign(obj, extra);
 }
 
 function postNow(obj) {
   postMessage(obj || startMsg());
-  Pulse.schedule();
+  Pulse.schedule(); // reset pulse
 }
 
+// eslint-disable-next-line no-unused-vars
 function postLater(obj) {
   defer(() => postNow(obj));
+  Pulse.schedule(); // reset pulses
 }
 
 const Pulse = {
   timer: null,
-  using: (fn) => (this.fn = fn),
-  send() {
-    postLater();
-  },
+  count: 0,
+  delay: 1,
   schedule() {
     clearTimeout(this.timer);
-    this.timer = setTimeout(this.send, 1e4);
+    this.timer = setTimeout(postNow, 1e4);
   },
   init: setTimeout(() => {
-    // hack invocation
+    // hack invocation (also needs external globals)
     console.log('Pulse', Pulse);
-    Pulse.send();
+    postNow();
   }),
 };
+
+// importScripts('//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js');
+// console.log(`From worker: worker started at ${moment().format('HH:mm:ss')}`);

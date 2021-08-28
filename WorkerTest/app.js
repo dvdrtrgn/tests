@@ -1,17 +1,27 @@
-const worker = new Worker('webworker.js');
+/*global Vue, */
 
-function read(obj, out) {
-  let str;
-  if (obj.log) str = obj.log;
-  else str = obj;
-  return JSON.stringify(str, null, 2) + (out || '');
+const worker = new Worker('webworker.js');
+const metakill = (k, v) => (k !== '_meta_' ? v : '...');
+
+function read(obj, out = '') {
+  let num = `#${obj._meta_.num}: `;
+  let str = JSON.stringify(obj, metakill, '\t');
+  let slug = obj.message;
+
+  if (obj.log) {
+    str = obj.message;
+  } else if (slug) {
+    if (obj[slug]) slug = `${slug} ${obj[slug]}`; // unwrap more?
+    str = slug;
+  }
+  return num + str + '\n' + out;
 }
 
-const app = new Vue({
+new Vue({
   el: '#app',
   data() {
     return {
-      delay: 1,
+      delay: 0,
       multiplier: 1,
       multiplicand: 1,
       product: 1,
@@ -24,8 +34,11 @@ const app = new Vue({
       this.dump(data);
       if ('product' in data) this.product = data.product;
     },
+    eraser() {
+      this.console = '';
+    },
     pester() {
-      worker.postMessage({ msg: 'pssst' });
+      worker.postMessage({ foo: 'pssst' });
     },
     linger() {
       this.delay = 999;
@@ -36,8 +49,7 @@ const app = new Vue({
       });
     },
     dump(data) {
-      this.reporter = data.from;
-      delete data.from;
+      this.reporter = data._meta_.from;
       this.console = read(data, this.console);
     },
   },
@@ -46,7 +58,7 @@ const app = new Vue({
   },
   watch: {
     delay() {
-      worker.postMessage({ delay: this.delay });
+      worker.postMessage({ msg: 'delay set', delay: this.delay });
     },
     multiplier() {
       this.publish();

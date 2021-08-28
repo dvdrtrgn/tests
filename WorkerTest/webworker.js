@@ -1,4 +1,4 @@
-/*global postMessage, onmessage, startMsg,  */
+/*global Pulse, importScripts, startMsg, postLater, postNow, */
 
 importScripts('./pulse.js');
 
@@ -6,12 +6,11 @@ const TIME = Date.now().toString().slice(9);
 const NAME = 'simple' + TIME;
 const FULLNAME = NAME + ' (webworker.js)';
 
-let DELAY = 1;
-
 const MULT = (a, b) => a * b;
 
-function process({ delay, factors, msg }) {
-  if (delay !== undefined) DELAY = Number(delay) || 0;
+function process(args) {
+  const { delay, factors, msg } = args;
+  if (delay !== undefined) Pulse.delay = Number(delay) || 0;
 
   if (factors) {
     let response = startMsg('product');
@@ -21,8 +20,8 @@ function process({ delay, factors, msg }) {
   if (msg) {
     return postLater(startMsg(msg));
   }
-  return postNow(startMsg('???'));
+  return postNow(startMsg('???', args));
 }
 
-console.log('init', NAME);
+console.log('init', FULLNAME);
 onmessage = (e) => process(e.data);

@@ -14,13 +14,55 @@
       display: inline-block;
       padding: 0 0.2em;
     }
+
+    big {
+      display: block;
+    }
+
+    body {
+      user-select: all;
+    }
   </style>
 </head>
 
 <body>
   <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
   <p><samp>Keyboard not found <br>Press <kbd>F1</kbd> to continue</samp></p>
+  <pre>
+    // Name Export | Name Import
+    export const name = 'value'
+    import { name } from '...'
 
+    // Default Export | Default Import
+    export default 'value'
+    import anyName from '...'
+
+    // Rename Export | NameImport
+    export { name as newName }
+    import { newName } from '...'
+
+    // Name + Default | Import All
+    export const name = 'value'
+    export default 'value'
+    <mark>import * as anyName from '...'</mark>
+
+    // Export List + Rename | Import List + Rename
+    export {
+      name1,
+      name2 as newName2
+    }
+    import {
+      name1 as newName1,
+      newName2
+    } from '...'
+  </pre>
+
+  <script>
+    let plain = '123'.padStart(9, '_').big();
+    let emoji = '123'.padStart(9, '👋').big();
+    document.write(emoji)
+    document.write(plain)
+  </script>
 </body>
 
 </html>

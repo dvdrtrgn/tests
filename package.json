@@ -8,7 +8,7 @@
     "eslint-plugin-html": "^6.1.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "browser-sync start --server --directory --files **"
   },
   "repository": {
     "type": "git",

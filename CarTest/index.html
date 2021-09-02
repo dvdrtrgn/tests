@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@3.2.6"></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <h1>Compare Efficiencies</h1>
+    <h2>Adjust distance and price&nbsp;settings:</h2>
+    <h3>Compare two drivers who upgrade their&nbsp;cars...</h3>
+    <p>
+      Bill needs over 66 {{ key().dpf }} to match what Sarah saves at 10
+      {{ key().dpf }}.
+    </p>
+    <table>
+      <tr>
+        <th>
+          Metric
+          <input type="checkbox" v-model="metric" />
+        </th>
+        <td>
+          Distance ({{ key().unitD }})
+          <input class="number" type="number" v-model.number="distance" />
+        </td>
+        <td>
+          Price per ({{ key().unitF }}) $
+          <input class="number" type="number" v-model.number="price" />
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>Scores:</th>
+        <th>Bill</th>
+        <th>Sarah</th>
+      </tr>
+      <tr>
+        <th>
+          Old car rating:<br />
+          <small>Fuel/distance:<br />
+            Consumption:</small>
+        </th>
+        <td>
+          <input class="number" type="number" v-model.number="Aold" disabled />
+          {{ key().dpf }}
+          <br />
+          <h6>{{ (1 / Aold).toFixed(3) }} {{ key().fpd }}</h6>
+          <i> {{ fuelUsed(Aold).toFixed(1) }} {{ key().unitF }} </i>
+          <small> (${{ costAt(Aold).toFixed(2) }}) </small>
+        </td>
+        <td>
+          <input class="number" type="number" v-model.number="Bold" disabled />
+          {{ key().dpf }}
+          <br />
+          <div>{{ (1 / Bold).toFixed(3) }} {{ key().fpd }}</div>
+          <i> {{ fuelUsed(Bold).toFixed(1) }} {{ key().unitF }} </i>
+          <small> (${{ costAt(Bold).toFixed(2) }}) </small>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          New car rating:<br />
+          <small>Fuel/distance:<br />
+            Consumption:</small>
+        </th>
+        <td>
+          <input class="number" type="number" v-model.number="Anew" /> {{ key().dpf }}
+          <br />
+          <h6>{{ (1 / Anew).toFixed(3) }} {{ key().fpd }}</h6>
+          <i> {{ fuelUsed(Anew).toFixed(2) }} {{ key().unitF }}</i>
+          <small> (${{ costAt(Anew).toFixed(2) }}) </small>
+        </td>
+        <td>
+          <input class="number" type="number" v-model.number="Bnew" /> {{ key().dpf }}
+          <br />
+          <h6>{{ (1 / Bnew).toFixed(3) }} {{ key().fpd }}</h6>
+          <i> {{ fuelUsed(Bnew).toFixed(2) }} {{ key().unitF }}</i>
+          <small> (${{ costAt(Bnew).toFixed(2) }}) </small>
+        </td>
+      </tr>
+      <tr>
+        <th>Savings</th>
+        <td>
+          <i> {{ fuelReduction(Aold, Anew).toFixed(2) }} {{ key().unitF }} </i>
+          <small> (${{ moneySaved(Anew, Aold).toFixed(2) }}) </small>
+        </td>
+        <td>
+          <i> {{ fuelReduction(Bold, Bnew).toFixed(2) }} {{ key().unitF }} </i>
+          <small> (${{ moneySaved(Bnew, Bold).toFixed(2) }}) </small>
+        </td>
+      </tr>
+      <tr>
+        <th>Efficiency<br />increase</th>
+        <td>
+          <span>{{ percentDiff(Aold, Anew).toFixed(0) }}%</span>
+          <br />
+          <small>({{ Anew }} / {{ Aold }})</small>
+        </td>
+        <td>
+          <span>{{ percentDiff(Bold, Bnew).toFixed(0) }}%</span>
+          <br />
+          <small>({{ Bnew }} / {{ Bold }})</small>
+        </td>
+      </tr>
+      <tr>
+        <th>{{ key().fpd }}<br />improvement</th>
+        <td>
+          <span>{{ carA_fpd().toFixed(2) }}%</span>
+          <br />
+          <small>(1/{{ Aold }} – 1/{{ Anew }})</small>
+        </td>
+        <td>
+          <span>{{ carB_fpd().toFixed(2) }}%</span>
+          <br />
+          <small>(1/{{ Bold }} – 1/{{ Bnew }})</small>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Who saves? <br />
+          {{ winner() ? winner() + ' wins!' : 'Tie' }}
+        </th>
+        <td colspan="2">
+          {{ Math.abs(pctDiff()).toFixed(0) }}% improvement difference <br />
+          <small>(relative fuel reduction)</small> <br />
+          <small>{{ key().fpd }} difference [B-A] divided by average [(A+B)/2]</small>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="app.js" type="module"></script>
+</body>
+
+</html>

@@ -1,14 +1,18 @@
 /*global Vue, */
 
-const flip = Math.random() > 0.5;
-
 const RootComponent = {
-  template: /*html*/ `<h1 :[attr]="value">see console</h1>`,
+  template: /*html*/ `<div>
+    <h1>see console</h1>
+    foo:{{ foo }} / bar:{{ bar }} / baz:{{ baz }}
+  </div>`,
   data() {
     return {
-      attr: flip ? 'class' : 'style',
-      value: flip ? 'red' : 'font-style: italic;',
+      foo: 1,
+      bar: 2,
     };
+  },
+  created() {
+    this.baz = 3;
   },
 };
 

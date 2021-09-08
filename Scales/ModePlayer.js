@@ -1,4 +1,5 @@
 import Scales from './libs/scales.js';
+import ToneWrap from './libs/tonewrap.js';
 
 export default {
   props: ['modelValue'],
@@ -7,12 +8,18 @@ export default {
   `,
   methods: {
     play() {
+      ToneWrap.enable();
       console.log('scale', this.scale);
+      ToneWrap.hitNote();
     },
   },
   computed: {
     scale() {
       return Scales[this.modelValue];
     },
+  },
+  created() {
+    console.clear();
+    console.log('ToneWrap', ToneWrap);
   },
 };

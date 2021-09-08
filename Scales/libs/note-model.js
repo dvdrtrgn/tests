@@ -9,6 +9,6 @@ export default class NoteModel {
     this.octave = parts[3];
     this.sharp = Boolean(parts[2]);
     this.fullname = start;
-    this.shortname = parts[1];
+    // this.shortname = parts[1];
   }
 }

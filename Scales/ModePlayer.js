@@ -1,4 +1,4 @@
-import Scales from './libs/scales.js';
+import ScalesIvals from './libs/scales-ivals.js';
 import ToneWrap from './libs/tonewrap.js';
 
 export default {
@@ -15,11 +15,11 @@ export default {
   },
   computed: {
     scale() {
-      return Scales[this.modelValue];
+      return ScalesIvals[this.modelValue];
     },
   },
   created() {
-    console.clear();
+    // console.clear();
     console.log('ToneWrap', ToneWrap);
   },
 };

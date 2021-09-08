@@ -1,4 +1,4 @@
-import Scales from './libs/scales.js';
+import ScalesIvals from './libs/scales-ivals.js';
 
 export default {
   template: /*html*/ `
@@ -11,12 +11,12 @@ export default {
   emits: ['update:modelValue'],
   data() {
     return {
-      scales: Scales,
+      scales: ScalesIvals,
     };
   },
   computed: {
     names() {
-      return Object.keys(Scales);
+      return Object.keys(this.scales);
     },
     selected: {
       get() {

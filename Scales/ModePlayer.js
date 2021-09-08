@@ -5,13 +5,15 @@ export default {
   props: ['modelValue'],
   template: /*html*/ `
     <button @click="play">Play {{ scale }}</button>
-    <p> Offset Key ({{ scale }}): {{ offsets }} </p>
-    <pre> Notes in scale: {{ notes }} </pre>
+    <p> Offset Key: {{ offsets }} </p>
+    <pre>
+Notes for octave: {{ notes }}
+    </pre>
   `,
   methods: {
     play() {
       ToneWrap.enable();
-      ToneWrap.playSequence(this.notes);
+      ToneWrap.playSequence(this.song);
     },
   },
   computed: {
@@ -19,16 +21,14 @@ export default {
       return this.modelValue;
     },
     offsets() {
-      return ScaleNotes.getOffsetsFor(this.scale);
+      return ScaleNotes.generateOffsetKey(this.scale);
     },
     notes() {
-      let notes = ScaleNotes.mapOffsetsToNotesAt(this.offsets);
-      return notes.map((e) => e.fullname);
+      return ScaleNotes.mapOffsetsToNotes(this.offsets);
+    },
+    song() {
+      return this.notes.map((e) => e.fullname);
     },
   },
-  created() {
-    // console.clear();
-    console.log('ToneWrap', ToneWrap);
-    console.log('ScaleNotes', ScaleNotes);
-  },
+  created() {},
 };

@@ -1,22 +1,23 @@
 import ScalesIvals from './scales-ivals.js';
 import NoteModel from './note-model.js';
-import MidiModel from './midi-model.js';
+
+const modulo = (n, m) => ((n % m) + m) % m;
+const quotient = (n, m) => Math.floor(n / m);
 
 /*
+  take a named note and mode
 
-turn each mode scale into a function
-  takes a named note
-  parse the hell out of it
+    model intervals as offsets
+    use midi as a universal note namer
+    help identify the notes by index and interval
 
-  gets the octave scale starting with that
-  selects just the ones for that mode
+  return factory
+    a function that takes a number pos/neg and calculates note
 
-  returns octave array of named notes
-  or
-  return scale function that takes a number pos/neg and give note
+  TODO turn each mode scale into a function
 */
 
-function getOffsetsFor(scaleNom) {
+function generateOffsetKey(scaleNom) {
   let cipher = ScalesIvals[scaleNom];
   let offsets = [];
   let lastnum = 0;
@@ -28,56 +29,51 @@ function getOffsetsFor(scaleNom) {
   return offsets;
 }
 
-function getNoteFromOffset(rootIdx, offsetIdx) {
-  let name = MidiModel.getName(offsetIdx + rootIdx);
-  return new NoteModel(name);
+function getNoteFromIndex(idx = 60) {
+  return new NoteModel(idx);
 }
 
-function mapOffsetsToNotesAt(offsets, rootIdx = 60) {
+function getNoteFromOffset(rootIdx, offsetIdx = 0) {
+  return getNoteFromIndex(offsetIdx + rootIdx);
+}
+
+function mapOffsetsToNotes(offsets, rootIdx = 60) {
   return offsets.map((offsetIdx) => {
     return getNoteFromOffset(rootIdx, offsetIdx);
   });
 }
 
-function wrapNumAt(num, limit) {
-  let mod = Number(num) % Number(limit);
-  while (mod < 0) mod += limit;
-  return mod || 0; // scrapes any neg sign
-}
+function factorizeNoteFromInterval(offsetKey, rootIdx) {
+  let total = offsetKey.length - 1;
 
-function makeNoteGetter(offsetKey, rootIdx) {
   return function (ivalNum) {
-    // turn ivalNum (interval) into offset (frets)
-    let total = offsetKey.length - 1;
+    let relOctave = quotient(ivalNum, total);
+    let relRoot = rootIdx + relOctave * 12;
 
-    let ival = wrapNumAt(ivalNum, total);
-    let offNum = offsetKey[ival];
+    let relInterval = modulo(ivalNum, total);
+    let offIndex = offsetKey[relInterval];
 
-    let note = getNoteFromOffset(rootIdx, offNum);
-
-    return note;
+    return getNoteFromOffset(relRoot, offIndex);
   };
 }
 
-function forMajor(noteNom = 'C4') {
-  let offsetKey = getOffsetsFor('ionian');
-  let rootNote = new NoteModel(noteNom);
-  let rootIndex = MidiModel.getNumber(rootNote.fullname);
+function modelScale(modeNom, rootNom = 'C4') {
+  let offsetKey = generateOffsetKey(modeNom);
+  let rootNote = new NoteModel(rootNom);
 
-  let notes = mapOffsetsToNotesAt(offsetKey, rootIndex);
+  return factorizeNoteFromInterval(offsetKey, rootNote.index);
+}
 
-  console.log(notes);
-
-  return makeNoteGetter(offsetKey, rootIndex);
+function testMajor(rootNom = 'C4') {
+  let major = modelScale('ionian', rootNom);
+  console.log({ major });
+  return major;
 }
 
 const API = {
-  forMajor,
-  getNoteFromOffset,
-  mapOffsetsToNotesAt,
-  getOffsetsFor,
+  generateOffsetKey,
+  mapOffsetsToNotes,
+  testMajor,
 };
-
-window.foo = API;
 
 export default API;

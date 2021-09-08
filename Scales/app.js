@@ -1,6 +1,7 @@
 /*global Vue, */
 import ModePicker from './ModePicker.js';
 import ModePlayer from './ModePlayer.js';
+// console.clear();
 
 const RootComponent = {
   template: /*html*/ `<div>

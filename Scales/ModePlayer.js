@@ -4,13 +4,14 @@ import ScaleNotes from './libs/scaleNotes.js';
 export default {
   props: ['modelValue'],
   template: /*html*/ `
-    <button @click="play">Log {{ modelValue }}</button>
-    <p> Offset Key: {{ offsets }} </p>
+    <button @click="play">Play {{ scale }}</button>
+    <p> Offset Key ({{ scale }}): {{ offsets }} </p>
+    <pre> Notes in scale: {{ notes }} </pre>
   `,
   methods: {
     play() {
       ToneWrap.enable();
-      ToneWrap.hitNote();
+      ToneWrap.playSequence(this.notes);
     },
   },
   computed: {
@@ -20,10 +21,9 @@ export default {
     offsets() {
       return ScaleNotes.getOffsetsFor(this.scale);
     },
-  },
-  watch: {
-    scale() {
-      console.log('offsets', this.offsets);
+    notes() {
+      let notes = ScaleNotes.mapOffsetsToNotesAt(this.offsets);
+      return notes.map((e) => e.fullname);
     },
   },
   created() {

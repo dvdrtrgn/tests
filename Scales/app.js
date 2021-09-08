@@ -10,7 +10,7 @@ const RootComponent = {
   </div>`,
   data() {
     return {
-      selectedMode: 'half',
+      selectedMode: 'ionian',
     };
   },
   created() {},

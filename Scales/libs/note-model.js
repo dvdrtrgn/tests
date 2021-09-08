@@ -5,9 +5,9 @@ export default class NoteModel {
     let parts = start.match(/^([A-G])(#)?(\d)$/);
     if (!parts) throw 'bad note';
 
-    this.name = parts[1] + (parts[2] || '');
+    // this.name = parts[1] + (parts[2] || '');
     this.octave = parts[3];
-    this.sharp = Boolean(parts[2]);
+    // this.sharp = Boolean(parts[2]);
     this.fullname = start;
     // this.shortname = parts[1];
   }

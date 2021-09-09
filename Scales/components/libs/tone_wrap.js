@@ -31,7 +31,7 @@ const API = {
 
 window._ = {
   ScaleNotes,
-  tone: API,
+  wrap: API,
 };
 
 export default API;

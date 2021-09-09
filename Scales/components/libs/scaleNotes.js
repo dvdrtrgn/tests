@@ -56,9 +56,12 @@ function testMajor(rootNom) {
 
 const API = {
   mapOffsetsToNotes,
-  testMajor,
+  modelScale,
+  major: testMajor(),
+  _: {
+    NoteModel,
+    ModesModel,
+  },
 };
-
-window.foo = testMajor();
 
 export default API;

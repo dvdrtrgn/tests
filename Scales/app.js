@@ -1,6 +1,6 @@
 /*global Vue, */
-import ModePicker from './ModePicker.js';
-import ModePlayer from './ModePlayer.js';
+import ModePicker from './components/ModePicker.js';
+import ModePlayer from './components/ModePlayer.js';
 // console.clear();
 
 const RootComponent = {

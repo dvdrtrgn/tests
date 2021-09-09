@@ -21,7 +21,7 @@ Notes for octave: {{ notes }}
       return this.modelValue;
     },
     offsets() {
-      return ModesModel.octaveOffsets(this.scale);
+      return ModesModel.offsets[this.scale];
     },
     notes() {
       return ScaleNotes.mapOffsetsToNotes(this.offsets);

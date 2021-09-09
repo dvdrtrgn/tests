@@ -42,7 +42,7 @@ function _fact_NoteFromIval(offsetKeys, rootIdx) {
 }
 
 function modelScale(modeNom, rootNom = 'C4') {
-  let offsetKeys = ModesModel.octaveOffsets(modeNom);
+  let offsetKeys = ModesModel.offsets[modeNom];
   let rootNote = new NoteModel(rootNom);
 
   return _fact_NoteFromIval(offsetKeys, rootNote.midi.index);

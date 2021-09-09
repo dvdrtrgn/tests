@@ -11,22 +11,19 @@ export default {
   enable() {
     Tone.start();
   },
-  hitNote(note = 'C4') {
+  hitNote(note = 'C4', delay = 0) {
     const now = Tone.now();
     this.enable();
 
-    this.synth.triggerAttack(note, now);
-    this.synth.triggerRelease(now + HOLD);
+    let start = now + delay;
+    let duration = start + HOLD;
+
+    this.synth.triggerAttack(note, start);
+    this.synth.triggerRelease(duration);
   },
   playSequence(notes = ['C4', 'G4']) {
-    const now = Tone.now();
-    this.enable();
-
     for (let i = 0; i < notes.length; i++) {
-      let delay = now + i * TICK;
-
-      this.synth.triggerAttack(notes[i], delay);
-      this.synth.triggerRelease(delay + HOLD);
+      this.hitNote(notes[i], i * TICK);
     }
   },
 };

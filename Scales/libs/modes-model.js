@@ -25,7 +25,7 @@ const Ciphers = {
   whole: [0, 2, 2, 2, 2, 2, 2],
 };
 
-function octaveOffsets(scaleNom) {
+function calcOctaveOffsets(scaleNom) {
   let cipher = Ciphers[scaleNom];
   let offsets = [];
   let lastnum = 0;
@@ -38,7 +38,19 @@ function octaveOffsets(scaleNom) {
   return offsets;
 }
 
-export default {
+function calcAllOffsets() {
+  const offsets = {};
+
+  for (let key in Ciphers) {
+    offsets[key] = calcOctaveOffsets(key);
+  }
+
+  return offsets;
+}
+
+const API = {
   names: Object.keys(Ciphers),
-  octaveOffsets,
+  offsets: calcAllOffsets(),
 };
+
+export default API;

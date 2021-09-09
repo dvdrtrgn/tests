@@ -1,31 +1,34 @@
-// Prove note fullname/number conversion
+// Provide note fullname/number conversion
 
 const ALLNAMES = 'C C# D D# E F F# G G# A A# B'.split(' ');
-const byNumber = [];
-const byName = {};
-
+const byIndex = [];
+const byNom = {};
 let counter = 12;
 
-// generate note list from 12 to 131
-for (let i = 0; i < 10; i++) {
-  for (let j = 0; j < 12; j++) {
-    let name = `${ALLNAMES[j]}${i}`;
-    byNumber[counter] = name;
-    byName[name] = counter;
-    counter++;
+// generate note lists from 12 to 131
+function init() {
+  for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < 12; j++) {
+      let nom = `${ALLNAMES[j]}${i}`;
+
+      byIndex[counter] = nom;
+      byNom[nom] = counter;
+
+      counter++;
+    }
   }
+  return true;
 }
 
-function ensureValue(val, input) {
-  if (val == null) throw `bad Midi input: ${input}`;
+function ensureValue(val, key) {
+  if (val == null) throw `bad Midi key: ${key}`;
   return val;
 }
 
 const API = {
-  getName: (num) => ensureValue(byNumber[num], num),
-  getNumber: (nom) => ensureValue(byName[nom], nom),
+  inited: init(),
+  getName: (num) => ensureValue(byIndex[num], num),
+  getNumber: (nom) => ensureValue(byNom[nom], nom),
 };
-
-// window.MIDI = API
 
 export default API;

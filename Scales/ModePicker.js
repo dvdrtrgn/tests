@@ -1,4 +1,4 @@
-import ScalesIvals from './libs/scales-ivals.js';
+import ModesModel from './libs/modes-model.js';
 
 export default {
   template: /*html*/ `
@@ -9,14 +9,9 @@ export default {
   `,
   props: ['modelValue'],
   emits: ['update:modelValue'],
-  data() {
-    return {
-      scales: ScalesIvals,
-    };
-  },
   computed: {
     names() {
-      return Object.keys(this.scales);
+      return ModesModel.names;
     },
     selected: {
       get() {

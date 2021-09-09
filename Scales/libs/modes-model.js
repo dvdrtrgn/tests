@@ -1,5 +1,5 @@
 // prettier-ignore
-export default {
+const Ciphers = {
   // major
   ionian: [0, 2, 2, 1, 2, 2, 2, 1],
   lydian: [0, 2, 2, 2, 1, 2, 2, 1],
@@ -23,4 +23,22 @@ export default {
   // odd
   half: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   whole: [0, 2, 2, 2, 2, 2, 2],
+};
+
+function octaveOffsets(scaleNom) {
+  let cipher = Ciphers[scaleNom];
+  let offsets = [];
+  let lastnum = 0;
+
+  for (let i = 0; i < cipher.length; i++) {
+    lastnum += cipher[i];
+    offsets.push(lastnum);
+  }
+
+  return offsets;
+}
+
+export default {
+  names: Object.keys(Ciphers),
+  octaveOffsets,
 };

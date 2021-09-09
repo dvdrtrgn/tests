@@ -1,4 +1,4 @@
-import ScalesIvals from './scales-ivals.js';
+import ModesModel from './modes-model.js';
 import NoteModel from './note-model.js';
 
 const modulo = (n, m) => ((n % m) + m) % m;
@@ -17,24 +17,8 @@ const quotient = (n, m) => Math.floor(n / m);
   TODO turn each mode scale into a function
 */
 
-function generateOffsetKey(scaleNom) {
-  let cipher = ScalesIvals[scaleNom];
-  let offsets = [];
-  let lastnum = 0;
-
-  for (let i = 0; i < cipher.length; i++) {
-    lastnum += cipher[i];
-    offsets.push(lastnum);
-  }
-  return offsets;
-}
-
-function getNoteFromIndex(idx = 60) {
-  return new NoteModel(idx);
-}
-
 function getNoteFromOffset(rootIdx, offsetIdx = 0) {
-  return getNoteFromIndex(offsetIdx + rootIdx);
+  return new NoteModel(rootIdx + offsetIdx);
 }
 
 function mapOffsetsToNotes(offsets, rootIdx = 60) {
@@ -43,37 +27,38 @@ function mapOffsetsToNotes(offsets, rootIdx = 60) {
   });
 }
 
-function factorizeNoteFromInterval(offsetKey, rootIdx) {
-  let total = offsetKey.length - 1;
+function _fact_NoteFromIval(offsetKeys, rootIdx) {
+  let modulus = offsetKeys.length - 1;
 
   return function (ivalNum) {
-    let relOctave = quotient(ivalNum, total);
+    let relOctave = quotient(ivalNum, modulus);
     let relRoot = rootIdx + relOctave * 12;
 
-    let relInterval = modulo(ivalNum, total);
-    let offIndex = offsetKey[relInterval];
+    let relInterval = modulo(ivalNum, modulus);
+    let offIndex = offsetKeys[relInterval];
 
     return getNoteFromOffset(relRoot, offIndex);
   };
 }
 
 function modelScale(modeNom, rootNom = 'C4') {
-  let offsetKey = generateOffsetKey(modeNom);
+  let offsetKeys = ModesModel.octaveOffsets(modeNom);
   let rootNote = new NoteModel(rootNom);
 
-  return factorizeNoteFromInterval(offsetKey, rootNote.index);
+  return _fact_NoteFromIval(offsetKeys, rootNote.midi.index);
 }
 
-function testMajor(rootNom = 'C4') {
+function testMajor(rootNom) {
   let major = modelScale('ionian', rootNom);
   console.log({ major });
   return major;
 }
 
 const API = {
-  generateOffsetKey,
   mapOffsetsToNotes,
   testMajor,
 };
+
+window.foo = testMajor();
 
 export default API;

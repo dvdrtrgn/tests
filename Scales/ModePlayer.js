@@ -1,19 +1,19 @@
-import ToneWrap from './libs/tonewrap.js';
+import ModesModel from './libs/modes-model.js';
 import ScaleNotes from './libs/scaleNotes.js';
+import Toner from './libs/tone_wrap.js';
 
 export default {
   props: ['modelValue'],
   template: /*html*/ `
     <button @click="play">Play {{ scale }}</button>
-    <p> Offset Key: {{ offsets }} </p>
+    <p> Offset Keys: {{ offsets }} </p>
     <pre>
 Notes for octave: {{ notes }}
     </pre>
   `,
   methods: {
     play() {
-      ToneWrap.enable();
-      ToneWrap.playSequence(this.song);
+      Toner.playSequence(this.names);
     },
   },
   computed: {
@@ -21,13 +21,13 @@ Notes for octave: {{ notes }}
       return this.modelValue;
     },
     offsets() {
-      return ScaleNotes.generateOffsetKey(this.scale);
+      return ModesModel.octaveOffsets(this.scale);
     },
     notes() {
       return ScaleNotes.mapOffsetsToNotes(this.offsets);
     },
-    song() {
-      return this.notes.map((e) => e.fullname);
+    names() {
+      return this.notes.map((e) => e.name);
     },
   },
   created() {},

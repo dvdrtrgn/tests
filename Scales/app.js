@@ -1,4 +1,6 @@
 /*global Vue, */
+import Store from './store.js';
+
 import SongPicker from './components/SongPicker.js';
 import SongPlayer from './components/SongPlayer.js';
 import ModePicker from './components/ModePicker.js';
@@ -15,12 +17,22 @@ const RootComponent = {
     <ModePlayer :modeProp="selectedMode" />
   </div>`,
   data() {
-    return {
+    return Store.init({
       selectedMode: 'ionian',
       selectedSong: 'mary',
-    };
+    });
   },
-  created() {},
+  created() {
+    console.log('Store', Store);
+  },
+  watch: {
+    selectedMode() {
+      Store.save();
+    },
+    selectedSong() {
+      Store.save();
+    },
+  },
 };
 
 const app = Vue.createApp(RootComponent);

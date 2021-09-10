@@ -31,7 +31,8 @@ function _fact_NoteFromIval(offsetKeys, rootIdx) {
   let modulus = offsetKeys.length - 1;
 
   return function (ivalNum) {
-    if (ivalNum === -999) return new NoteModel('C0');
+    if (ivalNum === 0) return new NoteModel('C0');
+    if (ivalNum > 0) ivalNum -= 1;
 
     let relOctave = quotient(ivalNum, modulus);
     let relRoot = rootIdx + relOctave * 12;

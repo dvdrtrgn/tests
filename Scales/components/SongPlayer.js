@@ -5,9 +5,8 @@ export default {
   props: ['song', 'mode'],
   template: /*html*/ `
     <button @click="play">Play {{ song }}</button>
-    <p>
-Notes for song: {{ names }}
-    </p>
+    <p> Intervals to play: {{ ivals }} </p>
+    <p> Notes for song: {{ names.join(' ') }} </p>
   `,
   methods: {
     play() {
@@ -15,6 +14,9 @@ Notes for song: {{ names }}
     },
   },
   computed: {
+    ivals() {
+      return SongsModel.getIvalsFor(this.song);
+    },
     notes() {
       return SongsModel.getNotesFor(this.song, this.mode);
     },

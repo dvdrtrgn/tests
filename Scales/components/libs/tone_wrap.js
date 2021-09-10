@@ -1,14 +1,14 @@
 /*global Tone, */
 import '/node_modules/tone/build/Tone.js';
-// import 'https://unpkg.com/tone@14.7.77/build/Tone.js';
 import ScaleNotes from './scaleNotes.js';
+import Synths from './synths/index.js';
 
 const TICK = 0.3;
 const HOLD = TICK / 2;
 
 const API = {
   Tone,
-  synth: new Tone.Synth().toDestination(),
+  synth: Synths.get('mono'),
   enable() {
     Tone.start();
   },

@@ -7,7 +7,7 @@ export default class NoteModel {
   constructor(arg = 'C4') {
     if (typeof arg === 'number') arg = fromNumber(arg);
 
-    let parts = arg.match(/^([A-G])(#)?(\d)$/);
+    let parts = arg.match(/^([A-G])(#)?(-?\d)$/);
     if (!parts) throw 'bad note';
 
     this.name = arg;

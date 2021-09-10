@@ -16,6 +16,8 @@ const API = {
     const now = Tone.now();
     this.enable();
 
+    if (note === 'C-4') return console.log('rest');
+
     let start = now + delay;
     let duration = start + HOLD;
 

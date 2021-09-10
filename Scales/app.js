@@ -8,11 +8,11 @@ import ModePlayer from './components/ModePlayer.js';
 const RootComponent = {
   template: /*html*/ `<div>
     <h1>see console</h1>
-    <SongPicker v-model="selectedSong" />
-    <SongPlayer v-model="selectedSong" />
+    <SongPicker v-model:songProp="selectedSong" />
+    <ModePicker v-model:modeProp="selectedMode" />
     <hr>
-    <ModePicker v-model="selectedMode" />
-    <ModePlayer v-model="selectedMode" />
+    <SongPlayer v-model:songProp="selectedSong" />
+    <ModePlayer v-model:modeProp="selectedMode" />
   </div>`,
   data() {
     return {

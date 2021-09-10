@@ -10,11 +10,11 @@ import ModePlayer from './components/ModePlayer.js';
 const RootComponent = {
   template: /*html*/ `<div>
     <h1>see console</h1>
-    <SongPicker v-model:songProp="selectedSong" />
-    <ModePicker v-model:modeProp="selectedMode" />
+    <SongPicker v-model:modelSong="selectedSong" />
+    <ModePicker v-model:modelMode="selectedMode" />
     <hr>
-    <SongPlayer :modeProp="selectedMode" :songProp="selectedSong" />
-    <ModePlayer :modeProp="selectedMode" />
+    <SongPlayer :mode="selectedMode" :song="selectedSong" />
+    <ModePlayer :mode="selectedMode" />
   </div>`,
   data() {
     return Store.init({

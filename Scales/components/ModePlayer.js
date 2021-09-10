@@ -3,9 +3,9 @@ import ScaleNotes from './libs/scaleNotes.js';
 import Toner from './libs/tone_wrap.js';
 
 export default {
-  props: ['modeProp'],
+  props: ['mode'],
   template: /*html*/ `
-    <button @click="play">Play {{ scale }}</button>
+    <button @click="play">Play {{ mode }}</button>
     <p> Offset Keys: {{ offsets }} </p>
     <pre>
 Notes for octave: {{ notes }}
@@ -17,11 +17,8 @@ Notes for octave: {{ notes }}
     },
   },
   computed: {
-    scale() {
-      return this.modeProp;
-    },
     offsets() {
-      return ModesModel.offsets[this.scale];
+      return ModesModel.offsets[this.mode];
     },
     notes() {
       return ScaleNotes.mapOffsetsToNotes(this.offsets);

@@ -7,18 +7,18 @@ export default {
       <option v-for="name in names">{{ name }}</option>
     </select>
   `,
-  props: ['modeProp'],
-  emits: ['update:modeProp'],
+  props: ['modelMode'],
+  emits: ['update:modelMode'],
   computed: {
     names() {
       return ModesModel.names;
     },
     selected: {
       get() {
-        return this.modeProp;
+        return this.modelMode;
       },
       set(val) {
-        this.$emit('update:modeProp', val);
+        this.$emit('update:modelMode', val);
       },
     },
   },

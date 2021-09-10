@@ -18,7 +18,9 @@ const Songs = {
   ],
 };
 
-function gimmeIntervalFor(songname = 'mary', scaleFactory = ScaleNotes.major) {
+function getNotesFor(songname = 'mary', modename = 'ionian') {
+  let scaleFactory = ScaleNotes.modelScale(modename);
+
   let song = Songs[songname].slice();
   let list = song.map((e) => {
     return scaleFactory(e);
@@ -29,7 +31,7 @@ function gimmeIntervalFor(songname = 'mary', scaleFactory = ScaleNotes.major) {
 
 export default {
   names: Object.keys(Songs),
-  gimmeIntervalFor,
-  mary: gimmeIntervalFor(),
-  gary: gimmeIntervalFor('gary'),
+  getNotesFor,
+  mary: getNotesFor('mary', 'ionian'),
+  gary: getNotesFor('gary', 'ionian'),
 };

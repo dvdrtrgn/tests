@@ -11,7 +11,7 @@ const RootComponent = {
     <SongPicker v-model:songProp="selectedSong" />
     <ModePicker v-model:modeProp="selectedMode" />
     <hr>
-    <SongPlayer v-model:songProp="selectedSong" />
+    <SongPlayer v-model:modeProp="selectedMode" v-model:songProp="selectedSong" />
     <ModePlayer v-model:modeProp="selectedMode" />
   </div>`,
   data() {

@@ -5,9 +5,11 @@ import '/node_modules/tone/build/Tone.js';
 import amsynth from './amsynth.js';
 import fmsynth from './fmsynth.js';
 import monosynth from './monosynth.js';
-import polysynth from './polysynth.js';
+// import polysynth from './polysynth.js';
+// TODO poly has no decay
 
 export default {
+  names: 'am fm mono default'.split(' '),
   get(arg) {
     switch (arg) {
       case 'am':
@@ -16,8 +18,8 @@ export default {
         return new Tone.FMSynth(fmsynth).toDestination();
       case 'mono':
         return new Tone.MonoSynth(monosynth).toDestination();
-      case 'poly':
-        return new Tone.PolySynth(polysynth).toDestination();
+      // case 'poly':
+      //   return new Tone.PolySynth(polysynth).toDestination();
       default:
         return new Tone.Synth().toDestination();
     }

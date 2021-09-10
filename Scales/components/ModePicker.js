@@ -2,10 +2,13 @@ import ModesModel from './libs/modes-model.js';
 
 export default {
   template: /*html*/ `
-    <select v-model="selected">
-      <option value="" disabled>Select One</option>
-      <option v-for="name in names">{{ name }}</option>
-    </select>
+    <label>
+      Mode name: <br>
+      <select v-model="selected">
+        <option value="" disabled>Select One</option>
+        <option v-for="name in names">{{ name }}</option>
+      </select>
+    </label>
   `,
   props: ['modelMode'],
   emits: ['update:modelMode'],

@@ -8,7 +8,10 @@ const HOLD = TICK / 2;
 
 const API = {
   Tone,
-  synth: Synths.get('mono'),
+  synth: Synths.get('am'),
+  setSynth(arg) {
+    this.synth = Synths.get(arg);
+  },
   enable() {
     Tone.start();
   },

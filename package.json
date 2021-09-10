@@ -8,7 +8,7 @@
     "eslint-plugin-html": "^6.1.2"
   },
   "scripts": {
-    "test": "browser-sync start --server --directory --files **"
+    "test": "browser-sync start --server --directory --watch --no-ghost-mode"
   },
   "repository": {
     "type": "git",

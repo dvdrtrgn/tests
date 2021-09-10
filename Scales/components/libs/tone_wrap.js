@@ -22,7 +22,7 @@ const API = {
     this.synth.triggerAttack(note, start);
     this.synth.triggerRelease(duration);
   },
-  playSequence(notes = ['C4', 'G4']) {
+  playSequence(notes = ['C4', 'F#4', 'G4']) {
     for (let i = 0; i < notes.length; i++) {
       this.hitNote(notes[i], i * TICK);
     }

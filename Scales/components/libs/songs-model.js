@@ -16,12 +16,19 @@ const Songs = {
     2, 1, 0, 1,   2, 2, 2, R,
     3, 4, R, 5,   R, 6, 7,
   ],
+  bonnie: [
+    0, 5, 4, 3, 4, 3, 1, 0,
+  ],
 };
 
+function getIvalsFor(songname = 'mary') {
+  return Songs[songname].slice();
+}
+
 function getNotesFor(songname = 'mary', modename = 'ionian') {
+  let song = getIvalsFor(songname);
   let scaleFactory = ScaleNotes.modelScale(modename);
 
-  let song = Songs[songname].slice();
   let list = song.map((e) => {
     return scaleFactory(e);
   });
@@ -31,7 +38,6 @@ function getNotesFor(songname = 'mary', modename = 'ionian') {
 
 export default {
   names: Object.keys(Songs),
+  getIvalsFor,
   getNotesFor,
-  mary: getNotesFor('mary', 'ionian'),
-  gary: getNotesFor('gary', 'ionian'),
 };

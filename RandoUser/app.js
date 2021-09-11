@@ -1,36 +1,15 @@
 /*global Vue, */
-import UserShow from './UserShow.js';
+import UserCollect from './components/UserCollect.js';
 
 const template = /*html*/ `
-  <button @click="getRando"> {{ btnLabel }} </button>
-  <UserShow v-for="user in users" :user="user"></UserShow>
+  <UserCollect></UserCollect>
 `;
 
 const app = Vue.createApp({
   template,
+  components: { UserCollect },
   data() {
-    return { users: [] };
-  },
-  computed: {
-    btnLabel() {
-      return `get ${this.users.length ? 'another' : 'a'} user`;
-    },
-  },
-  methods: {
-    getRando() {
-      let self = this;
-      return fetch('https://randomuser.me/api')
-        .then((res) => res.json())
-        .then(({ results }) => {
-          let user = results[0];
-          console.log('fetched user', user);
-          self.users.unshift(user);
-        })
-        .catch((error) => {
-          console.log('getRando', error);
-        });
-    },
+    return {};
   },
 });
-app.component('UserShow', UserShow);
 export default app.mount('#app');

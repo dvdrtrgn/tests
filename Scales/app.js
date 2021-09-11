@@ -11,15 +11,22 @@ import ModePlayer from './components/ModePlayer.js';
 const RootComponent = {
   template: /*html*/ `<div>
     <h1>Try the modes</h1>
-    <SynthPicker v-model:modelSynth="selectedSynth" />
     <SongPicker v-model:modelSong="selectedSong" />
     <ModePicker v-model:modelMode="selectedMode" />
-    <hr>
+    <SynthPicker v-model:modelSynth="selectedSynth" />
     <SongPlayer :mode="selectedMode" :song="selectedSong" />
-    <ModePlayer :mode="selectedMode" />
+    <hr>
+    <label>
+      <input v-model="showModeInfo" type="checkbox" />
+      Mode info
+    </label>
+    <div v-show="showModeInfo">
+      <ModePlayer :mode="selectedMode" />
+    </div>
   </div>`,
   data() {
     return Store.init({
+      showModeInfo: false,
       selectedMode: 'ionian',
       selectedSong: 'mary',
       selectedSynth: 'default',

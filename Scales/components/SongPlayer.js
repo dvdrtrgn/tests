@@ -5,8 +5,14 @@ export default {
   props: ['song', 'mode'],
   template: /*html*/ `
     <button @click="play">Play {{ song }}</button>
-    <p> Intervals to play: {{ ivals }} </p>
-    <p> Notes for song: {{ names.join(' ') }} </p>
+    <p>
+      Intervals to play: <br>
+      <small>{{ ivals.join(' / ') }}</small>
+    </p>
+    <p>
+      Notes for song: <br>
+      <small>{{ names.join(' / ') }}</small>
+    </p>
   `,
   methods: {
     play() {

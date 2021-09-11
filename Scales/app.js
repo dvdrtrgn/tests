@@ -10,7 +10,7 @@ import ModePlayer from './components/ModePlayer.js';
 
 const RootComponent = {
   template: /*html*/ `<div>
-    <h1>see console</h1>
+    <h1>Try the modes</h1>
     <SynthPicker v-model:modelSynth="selectedSynth" />
     <SongPicker v-model:modelSong="selectedSong" />
     <ModePicker v-model:modelMode="selectedMode" />

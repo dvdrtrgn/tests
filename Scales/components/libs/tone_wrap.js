@@ -10,16 +10,20 @@ const API = {
   Tone,
   synth: Synths.get('am'),
   setSynth(arg) {
+    this.quiet();
     this.synth = Synths.get(arg);
   },
   enable() {
     Tone.start();
   },
+  quiet() {
+    if (this.synth) this.synth.dispose();
+  },
   hitNote(note = 'C4', delay = 0) {
     const now = Tone.now();
     this.enable();
 
-    if (note === 'C-4') return console.log('rest');
+    if (note === '_') return console.log('rest');
 
     let start = now + delay;
     let duration = start + HOLD;

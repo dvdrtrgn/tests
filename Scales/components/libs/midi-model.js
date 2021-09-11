@@ -2,7 +2,7 @@
 
 const ALLNAMES = 'C C# D D# E F F# G G# A A# B'.split(' ');
 const byIndex = ['C-4'];
-const byNom = {'C-4': 0};
+const byNom = { _: 0 };
 let counter = 12;
 
 // generate note lists from 12 to 131
@@ -21,8 +21,8 @@ function init() {
 }
 
 function ensureValue(val, key) {
-  if (key === 'C-4') val = 0;
-  if (val == null) throw `bad Midi key: ${key}`;
+  // if (key === 'rest') val = 0;
+  if (val == null) throw `MidiModel, bad key: ${key}`;
   return val;
 }
 

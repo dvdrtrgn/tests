@@ -5,10 +5,12 @@ const fromNumber = (num) => MidiModel.getName(num);
 
 export default class NoteModel {
   constructor(arg = 'C4') {
+    let rest = arg === '_';
     if (typeof arg === 'number') arg = fromNumber(arg);
 
     let parts = arg.match(/^([A-G])(#)?(-?\d)$/);
-    if (!parts) throw 'bad note';
+    if (!parts && !rest) throw `NoteModel, bad note ${arg}`;
+    if (rest) parts = ['_', false, null]
 
     this.name = arg;
     this.midi = {

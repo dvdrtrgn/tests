@@ -14,17 +14,16 @@ function flatten(node) {
   return arr;
 }
 
-function reverse(node) {
-  let nextnode = node.next();
-  node.next = () => null;
+function reverse(head) {
+  let next = head.next();
+  head.next = () => null;
 
-  while (nextnode) {
-    let currrent = node;
-    node = nextnode;
-    nextnode = nextnode.next();
-    node.next = () => currrent;
+  while (next) {
+    let curr = head;
+    [head, next] = [next, next.next()];
+    head.next = () => curr;
   }
-  return node;
+  return head;
 }
 
 flatten(currentHead); //?

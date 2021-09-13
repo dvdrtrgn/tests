@@ -6,26 +6,27 @@ let currentHead = ll;
 function flatten(node) {
   let arr = [];
   do {
-    arr.push(node);
+    arr.push(node.value);
     node = node.next();
   } while (node.next());
-  arr.push(node);
+  arr.push(node.value);
   console.log(arr);
   return arr;
 }
 
-function resetNexts(arr) {
-  arr.reduce((a, b) => {
-    if (a) {
-      a.next = () => b;
-      b.next = () => null;
-    }
-    return b;
-  }, null);
-  return arr[0];
+function reverse(node) {
+  let nextnode = node.next();
+  node.next = () => null;
+
+  while (nextnode) {
+    let currrent = node;
+    node = nextnode;
+    nextnode = nextnode.next();
+    node.next = () => currrent;
+  }
+  return node;
 }
 
-const rev = flatten(currentHead).reverse();
-let newHead = resetNexts(rev);
-
-flatten(newHead); //?
+flatten(currentHead); //?
+currentHead = reverse(currentHead);
+flatten(currentHead); //?
